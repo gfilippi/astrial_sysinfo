@@ -4,7 +4,7 @@ This is a simple script to create a json or yaml output with a detailed descript
 ## how to install
 use curl to pull the installer and execute:
 ```
-curl -O -s https://raw.githubusercontent.com/gfilippi/astrial_sysinfo/refs/heads/main/install.sh && chmod 754 ./install.sh && install.sh
+curl -O -s https://raw.githubusercontent.com/gfilippi/astrial_sysinfo/refs/heads/main/install.sh && chmod 754 ./install.sh && ./install.sh
 ```
 The script will be located under /opt/astrial_sysinfo folder.
 
