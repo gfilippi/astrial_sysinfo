@@ -1,0 +1,5771 @@
+hardware:
+  cpu:
+    architecture: aarch64
+    cores: 4
+    soc: imx8mp
+    device_tree_model: System Electronics i.MX8MPlus Astrial board
+    device_tree_compatible: fsl,imx8mp-astrialfsl,imx8mp
+    soc_family: Freescale i.MX
+    soc_machine: System Electronics i.MX8MPlus Astrial board
+    soc_id: i.MX8MP
+    soc_revision: '1.1'
+    cpuinfo:
+      cpu_implementer: '0x41'
+      cpu_architecture: '8'
+      cpu_variant: '0x0'
+      cpu_part: '0xd03'
+      cpu_revision: '4'
+    lscpu:
+      architecture: aarch64
+      cpu_op-mode(s): 32-bit, 64-bit
+      byte_order: Little Endian
+      cpu(s): '4'
+      on-line_cpu(s)_list: 0-3
+      vendor_id: ARM
+      model_name: Cortex-A53
+      model: '4'
+      thread(s)_per_core: '1'
+      core(s)_per_cluster: '4'
+      socket(s): '-'
+      cluster(s): '1'
+      stepping: r0p4
+      cpu_max_mhz: '1600.0000'
+      cpu_min_mhz: '1200.0000'
+      bogomips: '16.00'
+      flags: fp asimd evtstrm aes pmull sha1 sha2 crc32 cpuid
+      numa_node(s): '1'
+      numa_node0_cpu(s): 0-3
+      vulnerability_itlb_multihit: Not affected
+      vulnerability_l1tf: Not affected
+      vulnerability_mds: Not affected
+      vulnerability_meltdown: Not affected
+      vulnerability_mmio_stale_data: Not affected
+      vulnerability_retbleed: Not affected
+      vulnerability_spec_store_bypass: Not affected
+      vulnerability_spectre_v1: Mitigation; __user pointer sanitization
+      vulnerability_spectre_v2: Not affected
+      vulnerability_srbds: Not affected
+      vulnerability_tsx_async_abort: Not affected
+  accelerators:
+    hailo:
+      device: hailo-8
+      firmware_version: 4.20.1 (release,app,extended context switch buffer)
+      device_architecture: HAILO8
+      board_name: Hailo-8
+      control_protocol: '2'
+      serial_number: <N/A>
+      pci_device: '0000:01:00.0'
+      identify:
+        executing_on_device: '0000:01:00.0'
+        control_protocol_version: '2'
+        firmware_version: 4.20.1 (release,app,extended context switch buffer)
+        logger_version: '0'
+        board_name: Hailo-8
+        device_architecture: HAILO8
+        serial_number: <N/A>
+        part_number: <N/A>
+        product_name: <N/A>
+      identify_raw: 'Executing on device: 0000:01:00.0
+
+        Identifying board
+
+        Control Protocol Version: 2
+
+        Firmware Version: 4.20.1 (release,app,extended context switch buffer)
+
+        Logger Version: 0
+
+        Board Name: Hailo-8
+
+        Device Architecture: HAILO8
+
+        Serial Number: <N/A>
+
+        Part Number: <N/A>
+
+        Product Name: <N/A>'
+  memory:
+    ram_total_bytes: 7994118144
+    ram_available_bytes: 7392747520
+    meminfo:
+      memtotal: 7994118144
+      memfree: 7249317888
+      memavailable: 7392747520
+      buffers: 60084224
+      cached: 172904448
+      swapcached: 0
+      active: 118497280
+      inactive: 218804224
+      active(anon): 1388544
+      inactive(anon): 114872320
+      active(file): 117108736
+      inactive(file): 103931904
+      unevictable: 0
+      mlocked: 0
+      swaptotal: 0
+      swapfree: 0
+      dirty: 32768
+      writeback: 0
+      anonpages: 104325120
+      mapped: 79036416
+      shmem: 11939840
+      kreclaimable: 56246272
+      slab: 85798912
+      sreclaimable: 56246272
+      sunreclaim: 29552640
+      kernelstack: 2732032
+      pagetables: 3108864
+      nfs_unstable: 0
+      bounce: 0
+      writebacktmp: 0
+      commitlimit: 3997057024
+      committed_as: 361598976
+      vmalloctotal: 136339039191040
+      vmallocused: 12234752
+      vmallocchunk: 0
+      percpu: 1556480
+      hardwarecorrupted: 0
+      anonhugepages: 0
+      shmemhugepages: 0
+      shmempmdmapped: 0
+      filehugepages: 0
+      filepmdmapped: 0
+      cmatotal: 1006632960
+      cmafree: 734298112
+      hugepages_total: 0
+      hugepages_free: 0
+      hugepages_rsvd: 0
+      hugepages_surp: 0
+      hugepagesize: 2097152
+      hugetlb: 0
+  storage:
+    rootfs: &id001
+      device: /dev/root
+      fstype: ext4
+      size_bytes: 30117216256
+      used_bytes: 5789900800
+      available_bytes: 23003459584
+      mountpoint: /
+    filesystems:
+    - *id001
+    - device: devtmpfs
+      fstype: devtmpfs
+      size_bytes: 3492233216
+      used_bytes: 4096
+      available_bytes: 3492229120
+      mountpoint: /dev
+    - device: tmpfs
+      fstype: tmpfs
+      size_bytes: 3997057024
+      used_bytes: 0
+      available_bytes: 3997057024
+      mountpoint: /dev/shm
+    - device: tmpfs
+      fstype: tmpfs
+      size_bytes: 1598824448
+      used_bytes: 10731520
+      available_bytes: 1588092928
+      mountpoint: /run
+    - device: tmpfs
+      fstype: tmpfs
+      size_bytes: 4194304
+      used_bytes: 0
+      available_bytes: 4194304
+      mountpoint: /sys/fs/cgroup
+    - device: tmpfs
+      fstype: tmpfs
+      size_bytes: 3997061120
+      used_bytes: 262144
+      available_bytes: 3996798976
+      mountpoint: /tmp
+    - device: tmpfs
+      fstype: tmpfs
+      size_bytes: 3997057024
+      used_bytes: 249856
+      available_bytes: 3996807168
+      mountpoint: /var/volatile
+    - device: /dev/mmcblk2p1
+      fstype: vfat
+      size_bytes: 66959360
+      used_bytes: 32204800
+      available_bytes: 34754560
+      mountpoint: /run/media/boot-mmcblk2p1
+    - device: tmpfs
+      fstype: tmpfs
+      size_bytes: 799408128
+      used_bytes: 4096
+      available_bytes: 799404032
+      mountpoint: /run/user/0
+    block_devices:
+    - name: mtdblock0
+      size: 33554432
+      type: disk
+      mountpoint: null
+      fstype: null
+    - name: mmcblk2
+      size: 31268536320
+      type: disk
+      mountpoint: null
+      fstype: null
+      children:
+      - name: mmcblk2p1
+        size: 67108864
+        type: part
+        mountpoint: /run/media/boot-mmcblk2p1
+        fstype: vfat
+      - name: mmcblk2p2
+        size: 31193038848
+        type: part
+        mountpoint: /
+        fstype: ext4
+    - name: mmcblk2boot0
+      size: 4194304
+      type: disk
+      mountpoint: null
+      fstype: null
+    - name: mmcblk2boot1
+      size: 4194304
+      type: disk
+      mountpoint: null
+      fstype: null
+software:
+  apps:
+  - name: demo_webserver
+    path: /root/apps/demo_webserver
+    last_modified: 1765459971
+  - name: detection
+    path: /root/apps/detection
+    last_modified: 1769619835
+  - name: face_recognition
+    path: /root/apps/face_recognition
+    last_modified: 1769619951
+  - name: libs
+    path: /root/apps/libs
+    last_modified: 1765459974
+  - name: license_plate_recognition
+    path: /root/apps/license_plate_recognition
+    last_modified: 1765459974
+  - name: multistream_detection
+    path: /root/apps/multistream_detection
+    last_modified: 1765459975
+  - name: pose_estimation
+    path: /root/apps/pose_estimation
+    last_modified: 1769619806
+  - name: semantic_segmentation
+    path: /root/apps/semantic_segmentation
+    last_modified: 1765459976
+  deb_packages:
+  - name: acl
+    version: 2.3.1-r0
+  - name: acl-dev
+    version: 2.3.1-r0
+  - name: adwaita-icon-theme-symbolic
+    version: 41.0-r0
+  - name: alsa-conf
+    version: 1.2.6.1-r0
+  - name: alsa-plugins-pulseaudio-conf
+    version: 1.2.6-r0
+  - name: alsa-state
+    version: 0.2.0-r5
+  - name: alsa-states
+    version: 0.2.0-r5
+  - name: alsa-tools
+    version: 1.2.5-r0
+  - name: alsa-topology-conf
+    version: 1.2.5.1-r0
+  - name: alsa-ucm-conf
+    version: 1.2.6.3-r0
+  - name: alsa-utils
+    version: 1.2.6-r0
+  - name: alsa-utils-aconnect
+    version: 1.2.6-r0
+  - name: alsa-utils-alsactl
+    version: 1.2.6-r0
+  - name: alsa-utils-alsaloop
+    version: 1.2.6-r0
+  - name: alsa-utils-alsamixer
+    version: 1.2.6-r0
+  - name: alsa-utils-alsatplg
+    version: 1.2.6-r0
+  - name: alsa-utils-alsaucm
+    version: 1.2.6-r0
+  - name: alsa-utils-amixer
+    version: 1.2.6-r0
+  - name: alsa-utils-aplay
+    version: 1.2.6-r0
+  - name: alsa-utils-aseqdump
+    version: 1.2.6-r0
+  - name: alsa-utils-aseqnet
+    version: 1.2.6-r0
+  - name: alsa-utils-iecset
+    version: 1.2.6-r0
+  - name: alsa-utils-midi
+    version: 1.2.6-r0
+  - name: alsa-utils-speakertest
+    version: 1.2.6-r0
+  - name: apt
+    version: 2.4.5-r0
+  - name: arm-compute-library
+    version: 22.05-r0
+  - name: at
+    version: 3.2.5-r0
+  - name: attr
+    version: 2.5.1-r0
+  - name: attr-dev
+    version: 2.5.1-r0
+  - name: autoconf
+    version: 2.71-r0
+  - name: automake
+    version: 1.16.5-r0
+  - name: avahi-daemon
+    version: 0.8-r0
+  - name: avahi-locale-en-gb
+    version: 0.8-r0
+  - name: babeltrace
+    version: 1.5.8-r0
+  - name: babeltrace2
+    version: 2.0.4-r0
+  - name: base-files
+    version: 3.0.14-r89
+  - name: base-files-dev
+    version: 3.0.14-r89
+  - name: base-passwd
+    version: 3.5.29-r0
+  - name: base-passwd-dev
+    version: 3.5.29-r0
+  - name: bash
+    version: 5.1.16-r0
+  - name: bash-completion
+    version: 2.11-r0
+  - name: bash-completion-dev
+    version: 2.11-r0
+  - name: bash-dev
+    version: 5.1.16-r0
+  - name: bats
+    version: 1.6.1-r0
+  - name: bats-dev
+    version: 1.6.1-r0
+  - name: bc
+    version: 1.07.1-r0
+  - name: bc-dev
+    version: 1.07.1-r0
+  - name: binutils
+    version: 2.38-r0
+  - name: binutils-dev
+    version: 2.38-r0
+  - name: blktool
+    version: 4-7.1-r0
+  - name: blktrace
+    version: 1.3.0+git0+366d30b9cd-r0
+  - name: bluez5
+    version: 5.65-r0
+  - name: bluez5-noinst-tools
+    version: 5.65-r0
+  - name: bluez5-obex
+    version: 5.65-r0
+  - name: bluez5-testtools
+    version: 5.65-r0
+  - name: bonnie++
+    version: 1.04-r0
+  - name: boost
+    version: 1.78.0-r0
+  - name: boost-dev
+    version: 1.78.0-r0
+  - name: boost-log
+    version: 1.78.0-r0
+  - name: boost-math
+    version: 1.78.0-r0
+  - name: boost-serialization
+    version: 1.78.0-r0
+  - name: boost-test
+    version: 1.78.0-r0
+  - name: bridge-utils
+    version: 1.7.1-r0
+  - name: btrfs-tools
+    version: 5.16.2-r0
+  - name: btrfs-tools-dev
+    version: 5.16.2-r0
+  - name: busybox
+    version: 1.35.0-r0
+  - name: busybox-udhcpc
+    version: 1.35.0-r0
+  - name: bzip2
+    version: 1.0.8-r0
+  - name: bzip2-dev
+    version: 1.0.8-r0
+  - name: ca-certificates
+    version: 20211016-r0
+  - name: can-utils
+    version: 2021.08.0-r0
+  - name: cantarell-fonts
+    version: 0.303.1-r0
+  - name: cantarell-fonts-dev
+    version: 0.303.1-r0
+  - name: catch2-dev
+    version: 2.13.7-r0
+  - name: ccache
+    version: 4.6-r0
+  - name: clblast
+    version: 1.5.2-r0
+  - name: cmake
+    version: 3.22.3-r0
+  - name: connman
+    version: 1.41-r0
+  - name: connman-client
+    version: 1.41-r0
+  - name: connman-tests
+    version: 1.41-r0
+  - name: connman-tools
+    version: 1.41-r0
+  - name: consolekit
+    version: 0.4.6-r0
+  - name: containerd-opencontainers
+    version: v1.6.6+git0+4e92d8e7e4-r0
+  - name: coreutils
+    version: 9.0-r0
+  - name: coreutils-dev
+    version: 9.0-r0
+  - name: coreutils-stdbuf
+    version: 9.0-r0
+  - name: cpio
+    version: 2.13-r0
+  - name: cpp
+    version: 11.3.0-r0
+  - name: cpp-symlinks
+    version: 11.3.0-r0
+  - name: cppzmq-dev
+    version: 4.8.1-r0
+  - name: cpufrequtils
+    version: 008-r5
+  - name: cracklib
+    version: 2.9.8-r0
+  - name: cracklib-dev
+    version: 2.9.8-r0
+  - name: cronie
+    version: 1.6.1-r0
+  - name: crypto-af-alg
+    version: git-r0
+  - name: cryptodev-linux
+    version: 1.12-r0
+  - name: cryptodev-linux-dev
+    version: 1.12-r0
+  - name: cryptodev-module
+    version: 1.12-r0
+  - name: cryptodev-tests
+    version: 1.12-r0
+  - name: cups-locale-en
+    version: 2.4.2-r0
+  - name: curl
+    version: 7.82.0-r0
+  - name: curl-dev
+    version: 7.82.0-r0
+  - name: custom-shell
+    version: 1.0-r0
+  - name: db
+    version: 1:5.3.28-r1
+  - name: dbench
+    version: 4.0-r0
+  - name: dbus-1
+    version: 1.14.0-r0
+  - name: dbus-common
+    version: 1.14.0-r0
+  - name: dbus-dev
+    version: 1.14.0-r0
+  - name: dbus-tools
+    version: 1.14.0-r0
+  - name: deepview-rt
+    version: 2.4.46-aarch64-r0
+  - name: deepview-rt-examples
+    version: 1.6-r0
+  - name: demo-experience-voice-demo
+    version: 1.0+0+9fbbd5da0e_d3714c23cc-r0
+  - name: desktop-file-utils
+    version: 0.26-r0
+  - name: devil
+    version: 1.8.0-r0
+  - name: diffstat
+    version: 1.64-r0
+  - name: diffutils
+    version: 3.8-r0
+  - name: diffutils-dev
+    version: 3.8-r0
+  - name: docker-ce
+    version: 20.10.12-ce+git906f57ff5b7100013dfef066ea8fe367706468df-r0
+  - name: docker-ce-cli
+    version: 20.10.12-ce+git906f57ff5b7100013dfef066ea8fe367706468df-r0
+  - name: dosfstools
+    version: 4.2-r0
+  - name: dpkg
+    version: 1.21.4-r0
+  - name: dpkg-start-stop
+    version: 1.21.4-r0
+  - name: dtc
+    version: 1.6.1-r0
+  - name: du-dust
+    version: 0.8.3-r0
+  - name: e2fsprogs
+    version: 1.46.5-r0
+  - name: e2fsprogs-badblocks
+    version: 1.46.5-r0
+  - name: e2fsprogs-dev
+    version: 1.46.5-r0
+  - name: e2fsprogs-dumpe2fs
+    version: 1.46.5-r0
+  - name: e2fsprogs-e2fsck
+    version: 1.46.5-r0
+  - name: e2fsprogs-mke2fs
+    version: 1.46.5-r0
+  - name: e2fsprogs-resize2fs
+    version: 1.46.5-r0
+  - name: ed
+    version: 1.18-r0
+  - name: elfutils
+    version: 0.186-r0
+  - name: elfutils-dev
+    version: 0.186-r0
+  - name: ethtool
+    version: 5.16-r0
+  - name: evtest
+    version: 1.34-r0
+  - name: expect
+    version: 5.45.4-r0
+  - name: fbset
+    version: 2.1-r4
+  - name: fbset-modes
+    version: 0.1.0-r6
+  - name: file
+    version: 5.41-r0
+  - name: file-dev
+    version: 5.41-r0
+  - name: findutils
+    version: 4.9.0-r0
+  - name: findutils-dev
+    version: 4.9.0-r0
+  - name: fio
+    version: 3.30-r0
+  - name: firmware-imx-easrc-imx8mn
+    version: 1:8.18-r0
+  - name: firmware-imx-sdma-imx7d
+    version: 1:8.18-r0
+  - name: firmware-imx-xcvr-imx8mp
+    version: 1:8.18-r0
+  - name: firmwared
+    version: 0+git0+2e6b5db43d-r0
+  - name: flex
+    version: 2.6.4-r0
+  - name: flex-dev
+    version: 2.6.4-r0
+  - name: fontconfig-utils
+    version: 2.13.1-r0
+  - name: fsl-rc-local
+    version: 1.0-r0
+  - name: fuser
+    version: 23.4-r0
+  - name: g++
+    version: 11.3.0-r0
+  - name: g++-symlinks
+    version: 11.3.0-r0
+  - name: gawk
+    version: 5.1.1-r0
+  - name: gawk-dev
+    version: 5.1.1-r0
+  - name: gcc
+    version: 11.3.0-r0
+  - name: gcc-sanitizers
+    version: 11.3.0-r0
+  - name: gcc-symlinks
+    version: 11.3.0-r0
+  - name: gdb
+    version: 11.2-r0
+  - name: gdbserver
+    version: 11.2-r0
+  - name: gettext
+    version: 0.21-r0
+  - name: gfxreconstruct
+    version: 1.2.182.0-r0
+  - name: git
+    version: 2.35.4-r0
+  - name: gli
+    version: 0.8.2.0+git0+0c171ee87f-r0
+  - name: glib-networking
+    version: 2.72.2-r0
+  - name: glib-networking-locale-en-gb
+    version: 2.72.2-r0
+  - name: glibc-binary-localedata-en-gb
+    version: 2.35-r0
+  - name: glibc-binary-localedata-en-us
+    version: 2.35-r0
+  - name: glibc-gconv
+    version: 2.35-r0
+  - name: glibc-gconv-cp1252
+    version: 2.35-r0
+  - name: glibc-gconv-ibm850
+    version: 2.35-r0
+  - name: glibc-gconv-iso8859-1
+    version: 2.35-r0
+  - name: glibc-gconv-iso8859-15
+    version: 2.35-r0
+  - name: glibc-localedata-i18n
+    version: 2.35-r0
+  - name: glibc-localedata-i18n-ctype
+    version: 2.35-r0
+  - name: glibc-localedata-iso14651-t1
+    version: 2.35-r0
+  - name: glibc-localedata-iso14651-t1-common
+    version: 2.35-r0
+  - name: glibc-localedata-translit-circle
+    version: 2.35-r0
+  - name: glibc-localedata-translit-cjk-compat
+    version: 2.35-r0
+  - name: glibc-localedata-translit-compat
+    version: 2.35-r0
+  - name: glibc-localedata-translit-font
+    version: 2.35-r0
+  - name: glibc-localedata-translit-fraction
+    version: 2.35-r0
+  - name: glibc-localedata-translit-narrow
+    version: 2.35-r0
+  - name: glibc-localedata-translit-neutral
+    version: 2.35-r0
+  - name: glibc-localedata-translit-small
+    version: 2.35-r0
+  - name: glibc-localedata-translit-wide
+    version: 2.35-r0
+  - name: glibc-mtrace
+    version: 2.35-r0
+  - name: glm
+    version: 0.9.9.8-r0
+  - name: glmark2
+    version: 2021.12-r0
+  - name: gnome-desktop-testing
+    version: 2021.1-r0
+  - name: gnome-desktop-testing-dev
+    version: 2021.1-r0
+  - name: gnome-theme-adwaita
+    version: 3.28-r0
+  - name: gnu-config
+    version: 20211108+git0+191bcb948f-r0
+  - name: go-helloworld
+    version: 0.1-r0
+  - name: go-runtime
+    version: 1.17.13-r0
+  - name: gobject-introspection
+    version: 1.72.0-r0
+  - name: gobject-introspection-dev
+    version: 1.72.0-r0
+  - name: googletest
+    version: 1.11.0+git0+9e71237221-r0
+  - name: gputop
+    version: 6.4.3.p4.6-r0
+  - name: grep
+    version: 3.7-r0
+  - name: grep-dev
+    version: 3.7-r0
+  - name: gst-examples
+    version: 1.18.6-r0
+  - name: gstreamer1.0
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-dev
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-locale-en-gb
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-accurip
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-adpcmdec
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-adpcmenc
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-aes
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-aiff
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-apps
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-asfmux
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-audiobuffersplit
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-audiofxbad
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-audiolatency
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-audiomixmatrix
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-audiovisualizers
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-autoconvert
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-bayer
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-bluez
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-bz2
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-camerabin
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-closedcaption
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-codecalpha
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-coloreffects
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-curl
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-dash
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-debugutilsbad
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-decklink
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-dvb
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-dvbsubenc
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-dvbsuboverlay
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-dvdspu
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-faceoverlay
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-fbdevsink
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-festival
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-fieldanalysis
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-freeverb
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-frei0r
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-gaudieffects
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-gdp
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-geometrictransform
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-hls
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-id3tag
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-inter
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-interlace
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-ipcpipeline
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-ivfparse
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-ivtc
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-jp2kdecimator
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-jpegformat
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-kms
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-legacyrawparse
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-locale-en-gb
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-meta
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-midi
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-mpegpsdemux
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-mpegpsmux
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-mpegtsdemux
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-mpegtsmux
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-mxf
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-netsim
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-pcapparse
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-pnm
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-proxy
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-removesilence
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-rfbsrc
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-rist
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-rsvg
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-rtmp2
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-rtpmanagerbad
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-rtponvif
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-sbc
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-sdpelem
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-segmentclip
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-shm
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-siren
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-smooth
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-smoothstreaming
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-sndfile
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-speed
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-subenc
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-switchbin
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-timecode
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-tinycompress
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-transcode
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-ttmlsubs
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-uvch264
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-videofiltersbad
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-videoframe-audiolevel
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-videoparsersbad
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-videosignal
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-vmnc
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-waylandsink
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-webp
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-bad-y4mdec
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-adder
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-alsa
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-app
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-apps
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-audioconvert
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-audiomixer
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-audiorate
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-audioresample
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-audiotestsrc
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-compositor
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-dev
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-encoding
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-gio
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-locale-en-gb
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-meta
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-ogg
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-opengl
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-overlaycomposition
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-pango
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-pbtypes
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-playback
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-rawparse
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-subparse
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-tcp
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-theora
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-typefindfunctions
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-videoconvert
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-videorate
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-videoscale
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-videotestsrc
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-volume
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-vorbis
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-ximagesink
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-base-xvimagesink
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-alaw
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-alpha
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-alphacolor
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-apetag
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-audiofx
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-audioparsers
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-auparse
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-autodetect
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-avi
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-cairo
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-cutter
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-debug
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-deinterlace
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-dtmf
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-effectv
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-equalizer
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-flac
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-flv
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-flxdec
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-gdkpixbuf
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-goom
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-goom2k1
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-icydemux
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-id3demux
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-imagefreeze
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-interleave
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-isomp4
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-jpeg
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-lame
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-level
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-locale-en-gb
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-matroska
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-meta
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-monoscope
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-mpg123
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-mulaw
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-multifile
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-multipart
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-navigationtest
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-ossaudio
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-png
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-pulseaudio
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-replaygain
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-rtp
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-rtpmanager
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-rtsp
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-shapewipe
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-smpte
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-soup
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-spectrum
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-speex
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-taglib
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-udp
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-video4linux2
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-videobox
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-videocrop
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-videofilter
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-videomixer
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-wavenc
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-wavparse
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-ximagesrc
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-plugins-good-y4menc
+    version: 1.20.3.imx-r0
+  - name: gstreamer1.0-rtsp-server
+    version: 1.20.3-r0
+  - name: gstreamer1.0-rtsp-server-meta
+    version: 1.20.3-r0
+  - name: gstreamer1.0-rtsp-server-rtspclientsink
+    version: 1.20.3-r0
+  - name: gtk+-locale-en-gb
+    version: 2.24.33-r0
+  - name: gtk+3-demo
+    version: 3.24.34-r0
+  - name: gtk+3-dev
+    version: 3.24.34-r0
+  - name: gtk+3-locale-en
+    version: 3.24.34-r0
+  - name: gtk+3-locale-en-gb
+    version: 3.24.34-r0
+  - name: gtkperf
+    version: 0.40-r0
+  - name: gzip
+    version: 1.12-r0
+  - name: hailo-firmware
+    version: 4.20.1-r0
+  - name: hailo-pci
+    version: 4.20.1-r0
+  - name: hailo-post-processes
+    version: 3.31.0-r0
+  - name: hailortcli
+    version: 4.20.1-r0
+  - name: half
+    version: 2.1.0-r0
+  - name: hicolor-icon-theme
+    version: 0.17-r0
+  - name: hostapd
+    version: 2.10-r0
+  - name: htop
+    version: 3.1.2-r0
+  - name: i2c-tools
+    version: 4.3-r0
+  - name: icu
+    version: 70.1-r0
+  - name: icu-dev
+    version: 70.1-r0
+  - name: imx-alsa-plugins
+    version: 1.0.26+0+a9643b8820-r0
+  - name: imx-codec-g.711
+    version: 4.7.2-r0
+  - name: imx-codec-g.723.1
+    version: 4.7.2-r0
+  - name: imx-codec-g.726
+    version: 4.7.2-r0
+  - name: imx-codec-g.729ab
+    version: 4.7.2-r0
+  - name: imx-codec-nb
+    version: 4.7.2-r0
+  - name: imx-codec-test-bin
+    version: 4.7.2-r0
+  - name: imx-codec-test-source
+    version: 4.7.2-r0
+  - name: imx-codec-wb
+    version: 4.7.2-r0
+  - name: imx-dsp
+    version: 2.0.2-r0
+  - name: imx-dsp-codec-ext
+    version: 2.0.2-r0
+  - name: imx-dspc-asrc
+    version: 1.0.1-r0
+  - name: imx-g2d-samples
+    version: 2.1+git0+3efd75a90e-r0
+  - name: imx-gpu-apitrace
+    version: 10.0.0-r0
+  - name: imx-gpu-sdk
+    version: 6.0.3-r0
+  - name: imx-gpu-viv
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: imx-gpu-viv-demos
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: imx-gpu-viv-tools
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: imx-gst1.0-plugin
+    version: 4.7.2+git0+3a0250b983-r0
+  - name: imx-gst1.0-plugin-gplay
+    version: 4.7.2+git0+3a0250b983-r0
+  - name: imx-gst1.0-plugin-grecorder
+    version: 4.7.2+git0+3a0250b983-r0
+  - name: imx-kobs
+    version: 5.5+git0+269fdffcf9-r0
+  - name: imx-m7-demos
+    version: 2.12.1-r0
+  - name: imx-parser
+    version: 4.7.2-r0
+  - name: imx-test
+    version: 1:7.0+0+6824398886-r0
+  - name: imx-vpu-hantro
+    version: 1.27.0-r0
+  - name: imx-vpu-hantro-daemon
+    version: 1.1.5-r0
+  - name: init-system-helpers-service
+    version: 1.62-r0
+  - name: initscripts
+    version: 1.0-r155
+  - name: initscripts-functions
+    version: 1.0-r155
+  - name: iozone3
+    version: 492-r0
+  - name: iperf2
+    version: 2.0.13-r0
+  - name: iperf3
+    version: 3.11-r0
+  - name: iproute2
+    version: 5.17.0-r0
+  - name: iproute2-dev
+    version: 5.17.0-r0
+  - name: iproute2-ip
+    version: 5.17.0-r0
+  - name: iptables
+    version: 1.8.7-r0
+  - name: iptables-dev
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-ah
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-dnat
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-dnpt
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-dst
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-eui64
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-frag
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-hbh
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-hl
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-icmp6
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-ipv6header
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-log
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-masquerade
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-mh
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-netmap
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-redirect
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-reject
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-rt
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-snat
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-snpt
+    version: 1.8.7-r0
+  - name: iptables-module-ip6t-srh
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-ah
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-clusterip
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-dnat
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-ecn
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-icmp
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-log
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-masquerade
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-netmap
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-realm
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-redirect
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-reject
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-snat
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-ttl
+    version: 1.8.7-r0
+  - name: iptables-module-ipt-ulog
+    version: 1.8.7-r0
+  - name: iptables-module-xt-addrtype
+    version: 1.8.7-r0
+  - name: iptables-module-xt-audit
+    version: 1.8.7-r0
+  - name: iptables-module-xt-bpf
+    version: 1.8.7-r0
+  - name: iptables-module-xt-cgroup
+    version: 1.8.7-r0
+  - name: iptables-module-xt-checksum
+    version: 1.8.7-r0
+  - name: iptables-module-xt-classify
+    version: 1.8.7-r0
+  - name: iptables-module-xt-cluster
+    version: 1.8.7-r0
+  - name: iptables-module-xt-comment
+    version: 1.8.7-r0
+  - name: iptables-module-xt-connbytes
+    version: 1.8.7-r0
+  - name: iptables-module-xt-connlimit
+    version: 1.8.7-r0
+  - name: iptables-module-xt-connmark
+    version: 1.8.7-r0
+  - name: iptables-module-xt-connsecmark
+    version: 1.8.7-r0
+  - name: iptables-module-xt-conntrack
+    version: 1.8.7-r0
+  - name: iptables-module-xt-cpu
+    version: 1.8.7-r0
+  - name: iptables-module-xt-ct
+    version: 1.8.7-r0
+  - name: iptables-module-xt-dccp
+    version: 1.8.7-r0
+  - name: iptables-module-xt-devgroup
+    version: 1.8.7-r0
+  - name: iptables-module-xt-dscp
+    version: 1.8.7-r0
+  - name: iptables-module-xt-ecn
+    version: 1.8.7-r0
+  - name: iptables-module-xt-esp
+    version: 1.8.7-r0
+  - name: iptables-module-xt-hashlimit
+    version: 1.8.7-r0
+  - name: iptables-module-xt-helper
+    version: 1.8.7-r0
+  - name: iptables-module-xt-hmark
+    version: 1.8.7-r0
+  - name: iptables-module-xt-idletimer
+    version: 1.8.7-r0
+  - name: iptables-module-xt-ipcomp
+    version: 1.8.7-r0
+  - name: iptables-module-xt-iprange
+    version: 1.8.7-r0
+  - name: iptables-module-xt-ipvs
+    version: 1.8.7-r0
+  - name: iptables-module-xt-led
+    version: 1.8.7-r0
+  - name: iptables-module-xt-length
+    version: 1.8.7-r0
+  - name: iptables-module-xt-limit
+    version: 1.8.7-r0
+  - name: iptables-module-xt-mac
+    version: 1.8.7-r0
+  - name: iptables-module-xt-mark
+    version: 1.8.7-r0
+  - name: iptables-module-xt-multiport
+    version: 1.8.7-r0
+  - name: iptables-module-xt-nfacct
+    version: 1.8.7-r0
+  - name: iptables-module-xt-nflog
+    version: 1.8.7-r0
+  - name: iptables-module-xt-nfqueue
+    version: 1.8.7-r0
+  - name: iptables-module-xt-osf
+    version: 1.8.7-r0
+  - name: iptables-module-xt-owner
+    version: 1.8.7-r0
+  - name: iptables-module-xt-physdev
+    version: 1.8.7-r0
+  - name: iptables-module-xt-pkttype
+    version: 1.8.7-r0
+  - name: iptables-module-xt-policy
+    version: 1.8.7-r0
+  - name: iptables-module-xt-quota
+    version: 1.8.7-r0
+  - name: iptables-module-xt-rateest
+    version: 1.8.7-r0
+  - name: iptables-module-xt-recent
+    version: 1.8.7-r0
+  - name: iptables-module-xt-rpfilter
+    version: 1.8.7-r0
+  - name: iptables-module-xt-sctp
+    version: 1.8.7-r0
+  - name: iptables-module-xt-secmark
+    version: 1.8.7-r0
+  - name: iptables-module-xt-set
+    version: 1.8.7-r0
+  - name: iptables-module-xt-socket
+    version: 1.8.7-r0
+  - name: iptables-module-xt-standard
+    version: 1.8.7-r0
+  - name: iptables-module-xt-statistic
+    version: 1.8.7-r0
+  - name: iptables-module-xt-string
+    version: 1.8.7-r0
+  - name: iptables-module-xt-synproxy
+    version: 1.8.7-r0
+  - name: iptables-module-xt-tcp
+    version: 1.8.7-r0
+  - name: iptables-module-xt-tcpmss
+    version: 1.8.7-r0
+  - name: iptables-module-xt-tcpoptstrip
+    version: 1.8.7-r0
+  - name: iptables-module-xt-tee
+    version: 1.8.7-r0
+  - name: iptables-module-xt-time
+    version: 1.8.7-r0
+  - name: iptables-module-xt-tos
+    version: 1.8.7-r0
+  - name: iptables-module-xt-tproxy
+    version: 1.8.7-r0
+  - name: iptables-module-xt-trace
+    version: 1.8.7-r0
+  - name: iptables-module-xt-u32
+    version: 1.8.7-r0
+  - name: iptables-module-xt-udp
+    version: 1.8.7-r0
+  - name: iptables-modules
+    version: 1.8.7-r0
+  - name: iputils
+    version: 20211215-r0
+  - name: iputils-arping
+    version: 20211215-r0
+  - name: iputils-clockdiff
+    version: 20211215-r0
+  - name: iputils-ninfod
+    version: 20211215-r0
+  - name: iputils-ping
+    version: 20211215-r0
+  - name: iputils-rarpd
+    version: 20211215-r0
+  - name: iputils-rdisc
+    version: 20211215-r0
+  - name: iputils-tracepath
+    version: 20211215-r0
+  - name: iso-codes
+    version: 4.11.0-r0
+  - name: iso-codes-dev
+    version: 4.11.0-r0
+  - name: iso-codes-locale-en
+    version: 4.11.0-r0
+  - name: isp-imx
+    version: 4.2.2.20.0-r0
+  - name: isp-imx-dev
+    version: 4.2.2.20.0-r0
+  - name: iw
+    version: 5.16-r0
+  - name: jailhouse
+    version: 0.2-r0
+  - name: joe
+    version: 4.6-r0
+  - name: kbd
+    version: 2.4.0-r0
+  - name: kbd-consolefonts
+    version: 2.4.0-r0
+  - name: kbd-keymaps
+    version: 2.4.0-r0
+  - name: kernel-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-image-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-image-image-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-a8293-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-act-gact-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-act-gate-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-act-mirred-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-adc-keys-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-aes-neon-blk-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-aes-neon-bs-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-af-alg-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-af9013-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-af9033-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-algif-aead-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-algif-hash-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-algif-rng-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-algif-skcipher-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-altera-freeze-bridge-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-amlogic-gxl-crypto-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-anubis-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ar1335-5.15.71+g5ef6222cf
+    version: 4.2.2.20.0-r0
+  - name: kernel-module-arc4-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-arm-smmuv3-pmu-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ascot2e-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-asix-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-at24-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-at25-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-atbm8830-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-atl1c-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-atmel-mxt-ts-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-au8522-common-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-au8522-decoder-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-au8522-dig-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-authenc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-authencesn-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ax88179-178a-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ax88796b-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-basler-camera-driver-vvcam-5.15.71+g5ef6222cf
+    version: 4.2.2.20.0-r0
+  - name: kernel-module-bcm-phy-lib-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-bcm-sba-raid-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-bcm3510-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-bcm54140-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-bcm7xxx-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-blake2b-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-blocklayoutdriver-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-blowfish-common-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-blowfish-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-bnx2x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-bq25890-charger-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-bq25980-charger-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-broadcom-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-btintel-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-btrfs-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-btrtl-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-btusb-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-caam-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-caam-jr-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-caamalg-desc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-caamhash-desc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-caamkeyblob-desc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-camellia-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-can-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-can-bcm-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-can-dev-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-can-gw-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-can-raw-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cast-common-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cast5-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cast6-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cbc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ccree-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cdc-acm-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cdc-ether-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cdc-ncm-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cdc-subset-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cfb-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ch7006-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-chacha-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-chacha-neon-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-chacha20poly1305-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cls-basic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cls-flower-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cls-tcindex-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cp210x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cppc-cpufreq-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-crc-ccitt-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-crct10dif-ce-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cros-ec-baro-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cros-ec-chardev-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cros-ec-light-prox-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cros-ec-sensors-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cros-ec-sensors-core-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-crypto-engine-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cryptodev-5.15.71+g5ef6222cf
+    version: 1.12-r0
+  - name: kernel-module-cts-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-curve25519-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cuse-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cx22700-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cx22702-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cx24110-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cx24113-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cx24116-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cx24117-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cx24120-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cx24123-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cxd2099-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cxd2820r-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cxd2841er-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cxd2880-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-cxd2880-spi-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-des-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dh-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dib0070-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dib0090-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dib3000mb-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dib3000mc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dib7000m-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dib7000p-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dib8000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dib9000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dibx000-common-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-display-connector-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dm-crypt-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dm-log-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dm-mirror-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dm-mod-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dm-region-hash-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dm-zero-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dm9601-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dpaa2-caam-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dpaa2-qdma-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dpdmai-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-drm-ttm-helper-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-drm-vram-helper-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-drx39xyj-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-drxd-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-drxk-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ds3000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dsa-core-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dvb-pll-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dw-drm-dsi-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dw-hdmi-ahb-audio-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dw-hdmi-cec-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dw-hdmi-i2s-audio-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-dwmac-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-e4000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ec100-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-edt-ft5x06-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-el-enclave-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-error-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-essiv-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-etnaviv-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-exc3000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-extcon-ptn5150-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-fc0011-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-fc0012-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-fc0013-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-fc2580-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-fcrypt-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-flexcan-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-fpga-bridge-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-fpga-region-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-fsl-jr-uio-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-fsl-qdma-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-fusb302-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-fuse-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-fxls8962af-core-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-fxls8962af-i2c-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-g-audio-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-g-ether-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-g-mass-storage-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-g-serial-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-g-zero-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-genet-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-gnss-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-gnss-mtk-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-gnss-serial-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-goodix-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-gpio-altera-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-gpio-bd9571mwv-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-gpio-ir-recv-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-gpio-regmap-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-gpio-sl28cpld-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-gpio-wcd934x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-gpu-sched-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-hailo-pci-5.15.71+g5ef6222cf
+    version: 4.20.1-r0
+  - name: kernel-module-hantro-vpu-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-hd3ss3220-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-helene-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-hibmc-drm-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-hid-multitouch-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-hisi-hpre-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-hisi-qm-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-hisi-sec2-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-hisi-trng-v2-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-hisi-zip-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-horus3a-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-i2c-gpio-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-i2c-hid-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-i2c-hid-acpi-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-i2c-hid-of-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-imx-audio-rpmsg-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-imx-common-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-imx-dsp-rproc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-imx-pcm-rpmsg-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-imx-rpmsg-pingpong-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-imx-rpmsg-tty-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-imx219-5.15.71+g5ef6222cf
+    version: 4.2.2.20.0-r0
+  - name: kernel-module-imx8-media-dev-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ina2xx-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ina3221-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ip-tables-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ip-tunnel-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ip6-tables-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ip6t-reject-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ip6table-filter-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ip6table-mangle-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ip6table-nat-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ipmi-devintf-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ipmi-msghandler-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ipmi-si-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ipt-reject-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-iptable-filter-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-iptable-mangle-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-iptable-nat-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ir-imon-decoder-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ir-jvc-decoder-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ir-kbd-i2c-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ir-mce-kbd-decoder-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ir-nec-decoder-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ir-rc5-decoder-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ir-rc6-decoder-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ir-rcmm-decoder-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ir-sanyo-decoder-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ir-sharp-decoder-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ir-sony-decoder-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ir-xmp-decoder-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-isl6405-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-isl6421-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-isl6423-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-isp-vvcam
+    version: 4.2.2.20.0-r0
+  - name: kernel-module-it913x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-itd1000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ix2505v-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-jailhouse-5.15.71+g5ef6222cf
+    version: 0.2-r0
+  - name: kernel-module-khazad-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-kirin-drm-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-l64781-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lan78xx-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-layerscape-edac-mod-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-leds-lm3692x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-leds-pca9532-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-leds-pca995x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lg2160-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lgdt3305-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lgdt3306a-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lgdt330x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lgs8gl5-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lgs8gxx-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-libchacha-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-libcrc32c-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-libcurve25519-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-libdes-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-libpoly1305-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-libsm4-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lima-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lm90-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lnbh25-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lnbh29-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lnbp21-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lnbp22-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lontium-lt8912b-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lontium-lt9611-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lontium-lt9611uxc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lp855x-bl-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-lrw-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-m88ds3103-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-m88rs2000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-m88rs6000t-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-macvlan-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-macvtap-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mali-dp-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-marvell-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-marvell10g-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-max17042-battery-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-max2165-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-max9611-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mb86a16-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mb86a20s-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mc44s803-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mcs7830-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-md-mod-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-md4-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-md5-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mdio-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mdio-bcm-unimac-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-microchip-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mlan-5.15.71+g5ef6222cf
+    version: 1.0-r0
+  - name: kernel-module-mlx4-core-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mlx4-en-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mlx5-core-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mn88443x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mn88472-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mn88473-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-moal-5.15.71+g5ef6222cf
+    version: 1.0-r0
+  - name: kernel-module-mpt3sas-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mscc-felix-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-msi001-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mt2060-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mt2063-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mt20xx-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mt2131-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mt2266-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mt312-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mt352-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mxc-jpeg-encdec-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mxl301rf-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mxl5005s-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mxl5007t-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mxl5xx-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-mxl692-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nbd-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nci-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-net1080-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nf-conntrack-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nf-defrag-ipv4-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nf-defrag-ipv6-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nf-log-syslog-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nf-nat-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nf-reject-ipv4-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nf-reject-ipv6-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nfc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nouveau-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ns-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nvmem-imx-ocotp-fsb-s400-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nvmem-rmem-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nxp89xx
+    version: 1.0-r0
+  - name: kernel-module-nxt200x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-nxt6000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-of-fpga-region-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ofb-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-option-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-or51132-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-or51211-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-os08a20-5.15.71+g5ef6222cf
+    version: 4.2.2.20.0-r0
+  - name: kernel-module-ov2775-5.15.71+g5ef6222cf
+    version: 4.2.2.20.0-r0
+  - name: kernel-module-ov5645-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-overlay-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-panel-boe-tv101wum-nl6-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-panel-lvds-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-panel-mantix-mlaf057we51-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-panel-sitronix-st7703-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-panel-truly-nt35597-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-panfrost-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-parade-ps8640-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-pcbc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-pci-meson-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-pegasus-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-pktgen-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-pl111-drm-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-plusb-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-poly1305-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-pwm-cros-ec-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-pwm-fan-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-pwm-fsl-ftm-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-pwm-sl28cpld-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-pwm-vibra-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-qcom-emac-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-qcom-spmi-adc5-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-qcom-spmi-vadc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-qcom-vadc-common-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-qm1d1b0004-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-qm1d1c0042-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-qrtr-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-qrtr-smd-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-qrtr-tun-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-qt1010-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-r8153-ecm-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-r820t-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-raid-class-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-raid6-pq-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-adstech-dvb-t-pci-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-alink-dtu-m-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-anysee-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-apac-viewcomp-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-astrometa-t2hybrid-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-asus-pc39-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-asus-ps3-100-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-ati-tv-wonder-hd-600-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-ati-x10-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-avermedia-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-avermedia-a16d-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-avermedia-cardbus-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-avermedia-dvbt-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-avermedia-m135a-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-avermedia-m733a-rm-k6-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-avermedia-rm-ks-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-avertv-303-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-azurewave-ad-tu700-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-beelink-gs1-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-behold-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-behold-columbus-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-budget-ci-old-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-cinergy-1400-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-cinergy-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-core-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-ct-90405-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-d680-dmb-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-delock-61959-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-dib0700-nec-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-dib0700-rc5-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-digitalnow-tinytwin-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-digittrade-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-dm1105-nec-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-dntv-live-dvb-t-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-dntv-live-dvbt-pro-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-dtt200u-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-dvbsky-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-dvico-mce-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-dvico-portable-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-em-terratec-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-encore-enltv-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-encore-enltv-fm53-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-encore-enltv2-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-evga-indtube-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-eztv-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-flydvb-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-flyvideo-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-fusionhdtv-mce-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-gadmei-rm008z-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-geekbox-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-genius-tvgo-a11mce-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-gotview7135-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-hauppauge-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-hisi-poplar-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-hisi-tv-demo-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-imon-mce-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-imon-pad-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-imon-rsc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-iodata-bctv7e-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-it913x-v1-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-it913x-v2-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-kaiomy-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-khadas-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-khamsin-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-kworld-315u-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-kworld-pc150u-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-kworld-plus-tv-analog-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-leadtek-y04g0051-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-lme2510-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-manli-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-mecool-kii-pro-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-mecool-kiii-pro-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-medion-x10-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-medion-x10-digitainer-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-medion-x10-or2x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-minix-neo-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-msi-digivox-ii-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-msi-digivox-iii-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-msi-tvanywhere-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-msi-tvanywhere-plus-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-nebula-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-nec-terratec-cinergy-xs-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-norwood-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-npgtech-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-odroid-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-pctv-sedna-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-pine64-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-pinnacle-color-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-pinnacle-grey-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-pinnacle-pctv-hd-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-pixelview-002t-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-pixelview-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-pixelview-mk12-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-pixelview-new-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-powercolor-real-angel-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-proteus-2309-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-purpletv-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-pv951-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-rc6-mce-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-real-audio-220-32-keys-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-reddo-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-snapstream-firefly-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-streamzap-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-su3000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-tanix-tx3mini-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-tanix-tx5max-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-tbs-nec-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-technisat-ts35-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-technisat-usb2-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-terratec-cinergy-c-pci-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-terratec-cinergy-s2-hd-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-terratec-cinergy-xs-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-terratec-slim-2-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-terratec-slim-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-tevii-nec-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-tivo-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-total-media-in-hand-02-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-total-media-in-hand-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-trekstor-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-tt-1500-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-twinhan-dtv-cab-ci-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-twinhan1027-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-vega-s9x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-videomate-m1f-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-videomate-s350-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-videomate-tv-pvr-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-videostrong-kii-pro-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-wetek-hub-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-wetek-play2-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-winfast-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-winfast-usbii-deluxe-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-x96max-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-xbox-360-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-xbox-dvd-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rc-zx-irdec-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rcar-dw-hdmi-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rcar-lvds-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-regmap-sdw-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-regmap-slimbus-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-regmap-spmi-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rmd160-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rmnet-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rpcsec-gss-krb5-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rpmsg-char-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rpmsg-ctrl-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rpmsg-iio-pedometer-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtc-ds1307-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtc-fsl-ftm-alarm-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtc-hym8563-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtc-m41t80-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtc-pcf2127-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtc-pcf85363-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtc-rk808-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtc-rv3028-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtc-rv8803-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtc-rx8581-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtl2830-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtl2832-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtl2832-sdr-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-rtl8150-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-s3fwrn5-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-s3fwrn5-i2c-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-s5h1409-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-s5h1411-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-s5h1420-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-s5h1432-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-s921-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sbs-battery-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sch-cbs-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sch-etf-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sch-ingress-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sch-mqprio-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sch-multiq-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sch-taprio-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-secvio-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-seed-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-serpent-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sha3-ce-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sha3-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sha512-arm64-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sha512-ce-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-si2157-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-si2165-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-si2168-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-si21xx-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sii902x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sil164-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-simple-bridge-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sit-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sl28cpld-hwmon-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sl28cpld-wdt-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-slim-qcom-ctrl-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-slimbus-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sm-test-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sm3-ce-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sm3-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sm4-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-smsc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-smsc75xx-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-smsc95xx-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-aloop-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-hwdep-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-ak4458-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-ak4613-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-ak5558-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-cros-ec-codec-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-dmic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-es7134-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-es7241-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-asoc-card-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-asrc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-aud2htx-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-audmix-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-easrc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-esai-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-micfil-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-mqs-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-rpmsg-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-sai-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-spdif-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-ssi-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-utils-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-fsl-xcvr-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-gtm601-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-imx-audmix-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-imx-audmux-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-imx-card-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-imx-hdmi-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-imx-pcm512x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-imx-pdm-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-imx-rpmsg-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-imx-sgtl5000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-imx-spdif-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-lpass-va-macro-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-lpass-wsa-macro-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-max98357a-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-max98927-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-msm8916-analog-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-msm8916-digital-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-pcm3168a-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-pcm3168a-i2c-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-pcm512x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-pcm512x-i2c-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-rl6231-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-rpmsg-ak4497-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-rpmsg-wm8960-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-rpmsg-wm8960-i2c-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-rt5659-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-sgtl5000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-simple-amplifier-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-simple-mux-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-spdif-rx-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-spdif-tx-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-tas571x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-tpa6130a2-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-wcd-mbhc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-wcd934x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-wm-hubs-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-wm8904-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-wm8960-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-wm8962-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-wm8994-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-soc-wsa881x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-sof-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-sof-imx8-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-sof-imx8m-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-sof-imx8ulp-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-sof-of-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-sof-xtensa-dsp-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-usb-audio-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-snd-usbmidi-lib-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-soundwire-bus-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-soundwire-qcom-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sp2-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sp887x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-spi-dw-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-spi-dw-mmio-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-sr9800-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-st-magn-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-st-magn-i2c-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-st-magn-spi-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-st-sensors-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-st-sensors-i2c-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-st-sensors-spi-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-stb0899-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-stb6000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-stb6100-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-streebog-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-stv0288-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-stv0297-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-stv0299-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-stv0367-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-stv0900-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-stv090x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-stv0910-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-stv6110-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-stv6110x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-stv6111-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-synaptics-dsx-i2c-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tag-ocelot-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tag-ocelot-8021q-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tap-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tc90522-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tcrypt-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda10021-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda10023-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda10048-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda1004x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda10071-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda10086-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda18212-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda18218-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda18250-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda18271-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda18271c2dd-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda665x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda8083-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda8261-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda826x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda827x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda8290-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda9887-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tda998x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tea-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tea5761-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tea5767-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-thc63lvd1024-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ti-sn65dsi86-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tls-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tps65132-regulator-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tps6598x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-trusted-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ts2020-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ttm-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tua6100-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tua9001-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tuner-simple-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tuner-types-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tuner-xc2028-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-tunnel4-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-twofish-common-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-twofish-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-uacce-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-usb-wwan-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-usbtest-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-uvcvideo-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-v4l2-h264-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-v4l2-jpeg-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-vcm-dw9790-5.15.71+g5ef6222cf
+    version: 4.2.2.20.0-r0
+  - name: kernel-module-vcnl4000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-vctrl-regulator-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ves1820-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-ves1x93-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-veth-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-vmac-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-vvcam-dwe-5.15.71+g5ef6222cf
+    version: 4.2.2.20.0-r0
+  - name: kernel-module-vvcam-isp-5.15.71+g5ef6222cf
+    version: 4.2.2.20.0-r0
+  - name: kernel-module-vvcam-video-5.15.71+g5ef6222cf
+    version: 4.2.2.20.0-r0
+  - name: kernel-module-wcd934x-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-wl18xx-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-wlcore-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-wlcore-sdio-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-wm8994-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-wp512-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-x-tables-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xc4000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xc5000-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xcbc-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xen-blkback-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xen-netback-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xhci-pci-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xhci-pci-renesas-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xor-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xor-neon-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xt-addrtype-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xt-checksum-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xt-conntrack-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xt-log-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xt-masquerade-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xt-nat-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xt-tcpudp-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xts-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-xxhash-generic-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-zaurus-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-zd1301-demod-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-zl10036-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-zl10039-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-module-zl10353-5.15.71+g5ef6222cf
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-modules
+    version: 5.15.71+git0+e14895d491-r0
+  - name: kernel-tools-iio
+    version: 1.0-r0
+  - name: kernel-tools-pci
+    version: 1.0-r0
+  - name: kernel-tools-virtio
+    version: 1.0-r0
+  - name: kexec
+    version: 2.0.23-r0
+  - name: keyctl-caam
+    version: git-r0
+  - name: keyutils
+    version: 1.6.1-r0
+  - name: killall
+    version: 23.4-r0
+  - name: kmod
+    version: 29-r0
+  - name: kmod-dev
+    version: 29-r0
+  - name: kmscube
+    version: git-r0
+  - name: lcms
+    version: 2.13.1-r0
+  - name: ldconfig
+    version: 2.35-r0
+  - name: ldd
+    version: 2.35-r0
+  - name: leptonica
+    version: 1.82.0-r0
+  - name: leptonica-dev
+    version: 1.82.0-r0
+  - name: less
+    version: 600-r0
+  - name: lib-aac-dec-arm-elinux3
+    version: 4.7.2-r0
+  - name: lib-bsac-dec-arm-elinux2
+    version: 4.7.2-r0
+  - name: lib-flac-dec-arm-elinux2
+    version: 4.7.2-r0
+  - name: lib-mp3-dec-arm-elinux2
+    version: 4.7.2-r0
+  - name: lib-oggvorbis-dec-arm-elinux2
+    version: 4.7.2-r0
+  - name: libacl1
+    version: 2.3.1-r0
+  - name: libaio1
+    version: 0.3.112-r0
+  - name: libarchive
+    version: 3.6.1-r0
+  - name: libarchive-dev
+    version: 3.6.1-r0
+  - name: libasan
+    version: 11.3.0-r0
+  - name: libasan-dev
+    version: 11.3.0-r0
+  - name: libasm1
+    version: 0.186-r0
+  - name: libasound-dev
+    version: 1.2.6.1-r0
+  - name: libasound-module-conf-pulse
+    version: 1.2.6-r0
+  - name: libasound-module-ctl-pulse
+    version: 1.2.6-r0
+  - name: libasound-module-pcm-pulse
+    version: 1.2.6-r0
+  - name: libasound2
+    version: 1.2.6.1-r0
+  - name: libassimp5
+    version: 5.2.4-r0
+  - name: libatk-1.0-0
+    version: 2.38.0-r0
+  - name: libatk-1.0-dev
+    version: 2.38.0-r0
+  - name: libatk-1.0-locale-en-gb
+    version: 2.38.0-r0
+  - name: libatk-bridge-2.0-0
+    version: 2.38.0-r0
+  - name: libatk-bridge-2.0-dev
+    version: 2.38.0-r0
+  - name: libatomic-dev
+    version: 11.3.0-r0
+  - name: libatomic1
+    version: 11.3.0-r0
+  - name: libatopology2
+    version: 1.2.6.1-r0
+  - name: libatspi-dev
+    version: 2.42.0-r0
+  - name: libatspi-locale-en-gb
+    version: 2.42.0-r0
+  - name: libatspi0
+    version: 2.42.0-r0
+  - name: libattr1
+    version: 2.5.1-r0
+  - name: libavahi-client3
+    version: 0.8-r0
+  - name: libavahi-common3
+    version: 0.8-r0
+  - name: libavahi-core7
+    version: 0.8-r0
+  - name: libbfd
+    version: 2.38-r0
+  - name: libblkid1
+    version: 2.37.4-r0
+  - name: libboost-atomic1.78.0
+    version: 1.78.0-r0
+  - name: libboost-chrono1.78.0
+    version: 1.78.0-r0
+  - name: libboost-container1.78.0
+    version: 1.78.0-r0
+  - name: libboost-context1.78.0
+    version: 1.78.0-r0
+  - name: libboost-contract1.78.0
+    version: 1.78.0-r0
+  - name: libboost-coroutine1.78.0
+    version: 1.78.0-r0
+  - name: libboost-date-time1.78.0
+    version: 1.78.0-r0
+  - name: libboost-fiber1.78.0
+    version: 1.78.0-r0
+  - name: libboost-filesystem1.78.0
+    version: 1.78.0-r0
+  - name: libboost-graph1.78.0
+    version: 1.78.0-r0
+  - name: libboost-iostreams1.78.0
+    version: 1.78.0-r0
+  - name: libboost-json1.78.0
+    version: 1.78.0-r0
+  - name: libboost-locale1.78.0
+    version: 1.78.0-r0
+  - name: libboost-program-options1.78.0
+    version: 1.78.0-r0
+  - name: libboost-python310-1.78.0
+    version: 1.78.0-r0
+  - name: libboost-random1.78.0
+    version: 1.78.0-r0
+  - name: libboost-regex1.78.0
+    version: 1.78.0-r0
+  - name: libboost-system1.78.0
+    version: 1.78.0-r0
+  - name: libboost-thread1.78.0
+    version: 1.78.0-r0
+  - name: libboost-timer1.78.0
+    version: 1.78.0-r0
+  - name: libboost-type-erasure1.78.0
+    version: 1.78.0-r0
+  - name: libboost-wave1.78.0
+    version: 1.78.0-r0
+  - name: libbz2-1
+    version: 1.0.8-r0
+  - name: libc-malloc-debug0
+    version: 2.35-r0
+  - name: libc6
+    version: 2.35-r0
+  - name: libc6-dbg
+    version: 2.35-r0
+  - name: libc6-dev
+    version: 2.35-r0
+  - name: libc6-extra-nss
+    version: 2.35-r0
+  - name: libc6-thread-db
+    version: 2.35-r0
+  - name: libc6-utils
+    version: 2.35-r0
+  - name: libcairo-dev
+    version: 1.16.0-r0
+  - name: libcairo-gobject2
+    version: 1.16.0-r0
+  - name: libcairo-script-interpreter2
+    version: 1.16.0-r0
+  - name: libcairo2
+    version: 1.16.0-r0
+  - name: libcap
+    version: 2.65-r0
+  - name: libcap-dev
+    version: 2.65-r0
+  - name: libcap-ng
+    version: 0.8.2-r0
+  - name: libcap-ng-dev
+    version: 0.8.2-r0
+  - name: libcheck-dev
+    version: 0.15.2-r0
+  - name: libcheck0
+    version: 0.15.2-r0
+  - name: libclc-imx
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libcom-err2
+    version: 1.46.5-r0
+  - name: libcroco
+    version: 0.6.13-r0
+  - name: libcrypt-dev
+    version: 4.4.28-r0
+  - name: libcrypt2
+    version: 4.4.28-r0
+  - name: libcrypto3
+    version: 3.0.5-r0
+  - name: libcups2
+    version: 2.4.2-r0
+  - name: libcurl4
+    version: 7.82.0-r0
+  - name: libdaa3840-30mc-dev
+    version: 4.2.2.20.0-r0
+  - name: libdaa3840-30mc1
+    version: 4.2.2.20.0-r0
+  - name: libdaemon0
+    version: 0.14-r0
+  - name: libdbus-1-3
+    version: 1.14.0-r0
+  - name: libdbus-glib-1-2
+    version: 0.112-r0
+  - name: libdebuginfod1
+    version: 0.186-r0
+  - name: libdevmapper
+    version: 2.03.11-r0
+  - name: libdrm-amdgpu1
+    version: 2.4.109.imx-r0
+  - name: libdrm-dev
+    version: 2.4.109.imx-r0
+  - name: libdrm-etnaviv1
+    version: 2.4.109.imx-r0
+  - name: libdrm-freedreno1
+    version: 2.4.109.imx-r0
+  - name: libdrm-intel1
+    version: 2.4.109.imx-r0
+  - name: libdrm-nouveau2
+    version: 2.4.109.imx-r0
+  - name: libdrm-omap1
+    version: 2.4.109.imx-r0
+  - name: libdrm-radeon1
+    version: 2.4.109.imx-r0
+  - name: libdrm-tests
+    version: 2.4.109.imx-r0
+  - name: libdrm-vivante1
+    version: 2.4.109.imx-r0
+  - name: libdrm2
+    version: 2.4.109.imx-r0
+  - name: libdw1
+    version: 0.186-r0
+  - name: libe2p2
+    version: 1.46.5-r0
+  - name: libegl-imx
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libegl-imx-dev
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libelf1
+    version: 0.186-r0
+  - name: libell0
+    version: 0.50-r0
+  - name: libepoxy-dev
+    version: 1.5.9-r0
+  - name: libepoxy0
+    version: 1.5.9-r0
+  - name: liberation-fonts
+    version: 1:2.1.5-r0
+  - name: libevdev
+    version: 1.12.1-r0
+  - name: libevdev-dev
+    version: 1.12.1-r0
+  - name: libevent-2.1-7
+    version: 2.1.12-r0
+  - name: libexif-dev
+    version: 0.6.24-r0
+  - name: libexif-locale-en-gb
+    version: 0.6.24-r0
+  - name: libexif12
+    version: 0.6.24-r0
+  - name: libexpat-dev
+    version: 2.4.9-r0
+  - name: libexpat1
+    version: 2.4.9-r0
+  - name: libext2fs2
+    version: 1.46.5-r0
+  - name: libfdisk1
+    version: 2.37.4-r0
+  - name: libffi-dev
+    version: 3.4.2-r0
+  - name: libffi8
+    version: 3.4.2-r0
+  - name: libfl2
+    version: 2.6.4-r0
+  - name: libflac8
+    version: 1.3.4-r0
+  - name: libflatbuffers-python3
+    version: 1.12.0-r0
+  - name: libflatbuffers1
+    version: 1.12.0-r0
+  - name: libfmt8
+    version: 8.1.1-r0
+  - name: libfontconfig-dev
+    version: 2.13.1-r0
+  - name: libfontconfig1
+    version: 2.13.1-r0
+  - name: libfontenc1
+    version: 1:1.1.4-r0
+  - name: libform5
+    version: 6.3+20220423-r0
+  - name: libformw5
+    version: 6.3+20220423-r0
+  - name: libfreerdp
+    version: 1:2.6.1-r0
+  - name: libfreetype-dev
+    version: 2.11.1-r0
+  - name: libfreetype6
+    version: 2.11.1-r0
+  - name: libfribidi-dev
+    version: 1.0.12-r0
+  - name: libfribidi0
+    version: 1.0.12-r0
+  - name: libfslvpuwrap3
+    version: git-r0
+  - name: libg2d-dev
+    version: 6.4.3.p4.6-r0
+  - name: libg2d2
+    version: 6.4.3.p4.6-r0
+  - name: libgal-imx
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libgal-imx-dev
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libgbm-imx
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libgbm-imx-dev
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libgcc-s-dev
+    version: 11.3.0-r0
+  - name: libgcc1
+    version: 11.3.0-r0
+  - name: libgcrypt
+    version: 1.9.4-r0
+  - name: libgcrypt-dev
+    version: 1.9.4-r0
+  - name: libgdbm-compat4
+    version: 1.23-r0
+  - name: libgdbm-dev
+    version: 1.23-r0
+  - name: libgdbm6
+    version: 1.23-r0
+  - name: libgdk-pixbuf-2.0-0
+    version: 2.42.9-r0
+  - name: libgdk-pixbuf-2.0-dev
+    version: 2.42.9-r0
+  - name: libgdk-pixbuf-2.0-loader-gif
+    version: 2.42.9-r0
+  - name: libgdk-pixbuf-2.0-loader-xpm
+    version: 2.42.9-r0
+  - name: libgdk-pixbuf-2.0-locale-en-gb
+    version: 2.42.9-r0
+  - name: libgettextlib
+    version: 0.21-r0
+  - name: libgettextsrc
+    version: 0.21-r0
+  - name: libgif-dev
+    version: 5.2.1-r0
+  - name: libgif7
+    version: 5.2.1-r0
+  - name: libgl-imx
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libgles1-imx
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libgles2-imx
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libgles2-imx-dev
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libgles3-imx-dev
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libglib-2.0-0
+    version: 1:2.72.3-r0
+  - name: libglib-2.0-dev
+    version: 1:2.72.3-r0
+  - name: libglib-2.0-locale-en-gb
+    version: 1:2.72.3-r0
+  - name: libglib-2.0-utils
+    version: 1:2.72.3-r0
+  - name: libglslc-imx
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libglslc-imx-dev
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libgmp-dev
+    version: 6.2.1-r0
+  - name: libgmp10
+    version: 6.2.1-r0
+  - name: libgmpxx4
+    version: 6.2.1-r0
+  - name: libgnutls-bin
+    version: 3.7.4-r0
+  - name: libgnutls-dev
+    version: 3.7.4-r0
+  - name: libgnutls-openssl27
+    version: 3.7.4-r0
+  - name: libgnutls30
+    version: 3.7.4-r0
+  - name: libgnutlsxx30
+    version: 3.7.4-r0
+  - name: libgomp-dev
+    version: 11.3.0-r0
+  - name: libgomp1
+    version: 11.3.0-r0
+  - name: libgpg-error
+    version: 1.44-r0
+  - name: libgpg-error-dev
+    version: 1.44-r0
+  - name: libgphoto2-6
+    version: 2.5.27-r0
+  - name: libgphoto2-camlibs
+    version: 2.5.27-r0
+  - name: libgphoto2-dev
+    version: 2.5.27-r0
+  - name: libgphoto2-port12
+    version: 2.5.27-r0
+  - name: libgpiod-dev
+    version: 1.6.3-r0
+  - name: libgpiod-ptest
+    version: 1.6.3-r0
+  - name: libgpiod-tools
+    version: 1.6.3-r0
+  - name: libgpiod2
+    version: 1.6.3-r0
+  - name: libgpiodcxx1
+    version: 1.6.3-r0
+  - name: libgpuperfcnt1.4.0
+    version: 6.4.3.p4.6-r0
+  - name: libgstadaptivedemux-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstallocators-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstapp-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstaudio-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstbadaudio-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstbasecamerabinsrc-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstcodecparsers-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstcodecs-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstfft-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstfsl-1.0-0
+    version: 4.7.2+git0+3a0250b983-r0
+  - name: libgstgl-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgsthailo
+    version: 4.20.1-r0
+  - name: libgsthailo-dev
+    version: 4.20.1-r0
+  - name: libgsthailotools
+    version: 3.31.0-r0
+  - name: libgsthailotools-dev
+    version: 3.31.0-r0
+  - name: libgstinsertbin-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstisoff-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstmatroska-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstmpegts-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstpbutils-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstphotography-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstplay-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstplayer-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstriff-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstrtp-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstrtsp-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstrtspserver-1.0-0
+    version: 1.20.3-r0
+  - name: libgstsctp-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstsdp-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstshark0
+    version: 2021.10.imx-r0
+  - name: libgsttag-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgsttranscoder-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgsturidownloader-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstvideo-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstwayland-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgstwebrtc-1.0-0
+    version: 1.20.3.imx-r0
+  - name: libgtk-2.0
+    version: 2.24.33-r0
+  - name: libgtk-3.0
+    version: 3.24.34-r0
+  - name: libgudev-1.0-0
+    version: 237-r0
+  - name: libhailort-dev
+    version: 4.20.1-r0
+  - name: libhailort4.20.1
+    version: 4.20.1-r0
+  - name: libhantro-vc8000e1
+    version: 1.9.0-r0
+  - name: libharfbuzz-dev
+    version: 4.0.1-r0
+  - name: libharfbuzz-subset0
+    version: 4.0.1-r0
+  - name: libharfbuzz0
+    version: 4.0.1-r0
+  - name: libical
+    version: 3.0.14-r0
+  - name: libice-dev
+    version: 1:1.0.10-r0
+  - name: libice6
+    version: 1:1.0.10-r0
+  - name: libicudata70
+    version: 70.1-r0
+  - name: libicui18n70
+    version: 70.1-r0
+  - name: libicuio70
+    version: 70.1-r0
+  - name: libicutu70
+    version: 70.1-r0
+  - name: libicuuc70
+    version: 70.1-r0
+  - name: libidn2-0
+    version: 2.3.2-r0
+  - name: libidn2-dev
+    version: 2.3.2-r0
+  - name: libimxswpdm1
+    version: 1.0.2-r0
+  - name: libinput-dev
+    version: 1.19.4-r0
+  - name: libinput10
+    version: 1.19.4-r0
+  - name: libjpeg-dev
+    version: 1:2.1.4-r0
+  - name: libjpeg62
+    version: 1:2.1.4-r0
+  - name: libjson-c5
+    version: 0.15-r0
+  - name: libkmod2
+    version: 29-r0
+  - name: libkms1
+    version: 2.4.109.imx-r0
+  - name: liblsan0
+    version: 11.3.0-r0
+  - name: libltdl7
+    version: 2.4.7-r0
+  - name: liblzma5
+    version: 5.2.6-r0
+  - name: liblzo2-2
+    version: 2.10-r0
+  - name: liblzo2-dev
+    version: 2.10-r0
+  - name: libmenu5
+    version: 6.3+20220423-r0
+  - name: libmenuw5
+    version: 6.3+20220423-r0
+  - name: libmicrohttpd-dev
+    version: 0.9.75-r0
+  - name: libmicrohttpd12
+    version: 0.9.75-r0
+  - name: libmnl-dev
+    version: 1.0.4-r0
+  - name: libmnl0
+    version: 1.0.4-r0
+  - name: libmount1
+    version: 2.37.4-r0
+  - name: libmp3lame0
+    version: 3.100-r0
+  - name: libmpc3
+    version: 1.2.1-r0
+  - name: libmpfr6
+    version: 4.1.0-r0
+  - name: libncurses5
+    version: 6.3+20220423-r0
+  - name: libncursesw5
+    version: 6.3+20220423-r0
+  - name: libnl-3-200
+    version: 1:3.5.0-r0
+  - name: libnl-genl-3-200
+    version: 1:3.5.0-r0
+  - name: libnn-imx
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libnsl-dev
+    version: 2.0.0-r0
+  - name: libnsl3
+    version: 2.0.0-r0
+  - name: libnss-db2
+    version: 2.35-r0
+  - name: libnss-mdns
+    version: 0.15.1-r0
+  - name: libnss-myhostname2
+    version: 1:250.5-r0
+  - name: libogg-dev
+    version: 1.3.5-r0
+  - name: libogg0
+    version: 1.3.5-r0
+  - name: libonnxruntime-tests
+    version: 1.10.0-r0
+  - name: libonnxruntime1.10.0
+    version: 1.10.0-r0
+  - name: libopcodes
+    version: 2.38-r0
+  - name: libopencl-imx
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libopencv-aruco-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-aruco406
+    version: 4.6.0.imx-r0
+  - name: libopencv-barcode-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-barcode406
+    version: 4.6.0.imx-r0
+  - name: libopencv-bgsegm-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-bgsegm406
+    version: 4.6.0.imx-r0
+  - name: libopencv-bioinspired-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-bioinspired406
+    version: 4.6.0.imx-r0
+  - name: libopencv-calib3d-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-calib3d406
+    version: 4.6.0.imx-r0
+  - name: libopencv-ccalib-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-ccalib406
+    version: 4.6.0.imx-r0
+  - name: libopencv-core-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-core406
+    version: 4.6.0.imx-r0
+  - name: libopencv-datasets-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-datasets406
+    version: 4.6.0.imx-r0
+  - name: libopencv-dnn-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-dnn-objdetect-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-dnn-objdetect406
+    version: 4.6.0.imx-r0
+  - name: libopencv-dnn-superres-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-dnn-superres406
+    version: 4.6.0.imx-r0
+  - name: libopencv-dnn406
+    version: 4.6.0.imx-r0
+  - name: libopencv-dpm-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-dpm406
+    version: 4.6.0.imx-r0
+  - name: libopencv-face-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-face406
+    version: 4.6.0.imx-r0
+  - name: libopencv-features2d-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-features2d406
+    version: 4.6.0.imx-r0
+  - name: libopencv-flann-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-flann406
+    version: 4.6.0.imx-r0
+  - name: libopencv-fuzzy-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-fuzzy406
+    version: 4.6.0.imx-r0
+  - name: libopencv-gapi-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-gapi406
+    version: 4.6.0.imx-r0
+  - name: libopencv-hfs-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-hfs406
+    version: 4.6.0.imx-r0
+  - name: libopencv-highgui-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-highgui406
+    version: 4.6.0.imx-r0
+  - name: libopencv-img-hash-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-img-hash406
+    version: 4.6.0.imx-r0
+  - name: libopencv-imgcodecs-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-imgcodecs406
+    version: 4.6.0.imx-r0
+  - name: libopencv-imgproc-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-imgproc406
+    version: 4.6.0.imx-r0
+  - name: libopencv-intensity-transform-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-intensity-transform406
+    version: 4.6.0.imx-r0
+  - name: libopencv-line-descriptor-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-line-descriptor406
+    version: 4.6.0.imx-r0
+  - name: libopencv-mcc-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-mcc406
+    version: 4.6.0.imx-r0
+  - name: libopencv-ml-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-ml406
+    version: 4.6.0.imx-r0
+  - name: libopencv-objdetect-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-objdetect406
+    version: 4.6.0.imx-r0
+  - name: libopencv-optflow-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-optflow406
+    version: 4.6.0.imx-r0
+  - name: libopencv-phase-unwrapping-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-phase-unwrapping406
+    version: 4.6.0.imx-r0
+  - name: libopencv-photo-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-photo406
+    version: 4.6.0.imx-r0
+  - name: libopencv-plot-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-plot406
+    version: 4.6.0.imx-r0
+  - name: libopencv-quality-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-quality406
+    version: 4.6.0.imx-r0
+  - name: libopencv-rapid-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-rapid406
+    version: 4.6.0.imx-r0
+  - name: libopencv-reg-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-reg406
+    version: 4.6.0.imx-r0
+  - name: libopencv-rgbd-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-rgbd406
+    version: 4.6.0.imx-r0
+  - name: libopencv-saliency-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-saliency406
+    version: 4.6.0.imx-r0
+  - name: libopencv-shape-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-shape406
+    version: 4.6.0.imx-r0
+  - name: libopencv-stereo-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-stereo406
+    version: 4.6.0.imx-r0
+  - name: libopencv-stitching-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-stitching406
+    version: 4.6.0.imx-r0
+  - name: libopencv-structured-light-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-structured-light406
+    version: 4.6.0.imx-r0
+  - name: libopencv-superres-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-superres406
+    version: 4.6.0.imx-r0
+  - name: libopencv-surface-matching-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-surface-matching406
+    version: 4.6.0.imx-r0
+  - name: libopencv-text-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-text406
+    version: 4.6.0.imx-r0
+  - name: libopencv-tracking-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-tracking406
+    version: 4.6.0.imx-r0
+  - name: libopencv-ts-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-ts406
+    version: 4.6.0.imx-r0
+  - name: libopencv-video-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-video406
+    version: 4.6.0.imx-r0
+  - name: libopencv-videoio-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-videoio406
+    version: 4.6.0.imx-r0
+  - name: libopencv-videostab-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-videostab406
+    version: 4.6.0.imx-r0
+  - name: libopencv-wechat-qrcode-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-wechat-qrcode406
+    version: 4.6.0.imx-r0
+  - name: libopencv-xfeatures2d-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-xfeatures2d406
+    version: 4.6.0.imx-r0
+  - name: libopencv-ximgproc-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-ximgproc406
+    version: 4.6.0.imx-r0
+  - name: libopencv-xobjdetect-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-xobjdetect406
+    version: 4.6.0.imx-r0
+  - name: libopencv-xphoto-dev
+    version: 4.6.0.imx-r0
+  - name: libopencv-xphoto406
+    version: 4.6.0.imx-r0
+  - name: libopenvg1
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libopenvx-imx
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: liborc-0.4-0
+    version: 0.4.32-r0
+  - name: liborc-test-0.4-0
+    version: 0.4.32-r0
+  - name: libp11-3
+    version: 0.4.11-r0
+  - name: libpam
+    version: 1.5.2-r0
+  - name: libpam-dev
+    version: 1.5.2-r0
+  - name: libpam-runtime
+    version: 1.5.2-r0
+  - name: libpanel5
+    version: 6.3+20220423-r0
+  - name: libpanelw5
+    version: 6.3+20220423-r0
+  - name: libpcap1
+    version: 1.10.1-r0
+  - name: libpci3
+    version: 3.7.0-r0
+  - name: libpciaccess-dev
+    version: 0.16-r0
+  - name: libpciaccess0
+    version: 0.16-r0
+  - name: libpcre-dev
+    version: 8.45-r0
+  - name: libpcre1
+    version: 8.45-r0
+  - name: libpcre2-16-0
+    version: 10.40-r0
+  - name: libpcrecpp0
+    version: 8.45-r0
+  - name: libpcreposix0
+    version: 8.45-r0
+  - name: libpixman-1-0
+    version: 1:0.40.0-r0
+  - name: libpixman-1-dev
+    version: 1:0.40.0-r0
+  - name: libpng16-16
+    version: 1.6.38-r0
+  - name: libpng16-dev
+    version: 1.6.38-r0
+  - name: libpopt0
+    version: 1.18-r0
+  - name: libprocps8
+    version: 3.3.17-r0
+  - name: libprotobuf-compiler
+    version: 3.19.4-r0
+  - name: libprotobuf-dev
+    version: 3.19.4-r0
+  - name: libprotobuf-lite30
+    version: 3.19.4-r0
+  - name: libprotobuf30
+    version: 3.19.4-r0
+  - name: libpsl5
+    version: 0.21.1-r0
+  - name: libpthread-stubs-dev
+    version: 0.4-r0
+  - name: libpulse-simple0
+    version: 15.0-r0
+  - name: libpulse0
+    version: 15.0-r0
+  - name: libpulsecommon
+    version: 15.0-r0
+  - name: libpulsecore
+    version: 15.0-r0
+  - name: libpython3.10-1.0
+    version: 3.10.7-r0
+  - name: libqt6core5compat-plugins
+    version: 6.3.2-r0
+  - name: libqt6core5compat-qmlplugins
+    version: 6.3.2-r0
+  - name: libqt6core5compat6
+    version: 6.3.2-r0
+  - name: libqt6quicktimeline-dev
+    version: 6.3.2-r0
+  - name: libqt6quicktimeline-plugins
+    version: 6.3.2-r0
+  - name: libqt6quicktimeline-qmlplugins
+    version: 6.3.2-r0
+  - name: libqt6quicktimeline6
+    version: 6.3.2-r0
+  - name: libqt6shadertools-dev
+    version: 6.3.2-r0
+  - name: libqt6shadertools-plugins
+    version: 6.3.2-r0
+  - name: libqt6shadertools-qmlplugins
+    version: 6.3.2-r0
+  - name: libqt6shadertools6
+    version: 6.3.2-r0
+  - name: libreadline-dev
+    version: 8.1.2-r0
+  - name: libreadline8
+    version: 8.1.2-r0
+  - name: librealsense2-2.50
+    version: 2.50.0-r0
+  - name: librealsense2-debug-tools
+    version: 2.50.0-r0
+  - name: librealsense2-tools
+    version: 2.50.0-r0
+  - name: librecorder-engine-1.0-0
+    version: 4.7.2+git0+3a0250b983-r0
+  - name: librsvg-2-2
+    version: 2.52.7-r0
+  - name: libsamplerate0
+    version: 0.2.2-r0
+  - name: libsbc1
+    version: 1.5-r0
+  - name: libseccomp
+    version: 2.5.3-r0
+  - name: libseccomp-dev
+    version: 2.5.3-r0
+  - name: libsm-dev
+    version: 1:1.2.3-r0
+  - name: libsm6
+    version: 1:1.2.3-r0
+  - name: libsmartcols1
+    version: 2.37.4-r0
+  - name: libsndfile1
+    version: 1.0.31-r0
+  - name: libsodium-dev
+    version: 1.0.18-r0
+  - name: libsodium23
+    version: 1.0.18-r0
+  - name: libsoup-2.4
+    version: 2.74.2-r0
+  - name: libsoup-2.4-locale-en-gb
+    version: 2.74.2-r0
+  - name: libspeex1
+    version: 1.2.0-r0
+  - name: libspeexdsp1
+    version: 1.2.0-r0
+  - name: libsqlite3-0
+    version: 3:3.38.5-r0
+  - name: libsqlite3-dev
+    version: 3:3.38.5-r0
+  - name: libss2
+    version: 1.46.5-r0
+  - name: libssl3
+    version: 3.0.5-r0
+  - name: libstdc++-dev
+    version: 11.3.0-r0
+  - name: libstdc++6
+    version: 11.3.0-r0
+  - name: libsystemd-shared
+    version: 1:250.5-r0
+  - name: libsystemd0
+    version: 1:250.5-r0
+  - name: libtag1
+    version: 1.12-r0
+  - name: libtasn1-6
+    version: 4.19.0-r0
+  - name: libtasn1-dev
+    version: 4.19.0-r0
+  - name: libtcl8.6-0
+    version: 8.6.11-r0
+  - name: libtensorflow-lite2.9.1
+    version: 2.9.1-r0
+  - name: libtheora
+    version: 1.1.1-r1
+  - name: libtheora-dev
+    version: 1.1.1-r1
+  - name: libtic5
+    version: 6.3+20220423-r0
+  - name: libticw5
+    version: 6.3+20220423-r0
+  - name: libtiff-dev
+    version: 4.3.0-r0
+  - name: libtiff5
+    version: 4.3.0-r0
+  - name: libtiffxx5
+    version: 4.3.0-r0
+  - name: libtinfo5
+    version: 6.3+20220423-r0
+  - name: libtinyxml2-9
+    version: 9.0.0-r0
+  - name: libtinyxml2-dev
+    version: 9.0.0-r0
+  - name: libtirpc-dev
+    version: 1.3.2-r0
+  - name: libtirpc3
+    version: 1.3.2-r0
+  - name: libtool
+    version: 2.4.7-r0
+  - name: libtool-dev
+    version: 2.4.7-r0
+  - name: libts0
+    version: 1.22-r0
+  - name: libtsan0
+    version: 11.3.0-r0
+  - name: libturbojpeg0
+    version: 1:2.1.4-r0
+  - name: libubsan-dev
+    version: 11.3.0-r0
+  - name: libubsan1
+    version: 11.3.0-r0
+  - name: libudev1
+    version: 1:250.5-r0
+  - name: libunistring-dev
+    version: 1.0-r0
+  - name: libunistring2
+    version: 1.0-r0
+  - name: libunwind
+    version: 1.6.2-r0
+  - name: libusb-1.0-0
+    version: 1.0.26-r0
+  - name: libusb-1.0-dev
+    version: 1.0.26-r0
+  - name: libuuid-dev
+    version: 2.37.4-r0
+  - name: libuuid1
+    version: 2.37.4-r0
+  - name: libv4l
+    version: 1.22.1-r0
+  - name: libv4l-dev
+    version: 1.22.1-r0
+  - name: libvdk1
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libvorbis
+    version: 1.3.7-r0
+  - name: libvorbis-dev
+    version: 1.3.7-r0
+  - name: libvsc-imx
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libvulkan-dev
+    version: 1.2.182.0-r0
+  - name: libvulkan-imx
+    version: 1:6.4.3.p4.6-aarch64-r0
+  - name: libvulkan1
+    version: 1.2.182.0-r0
+  - name: libwaffle-1-0
+    version: 1.7.0-r0
+  - name: libwebp
+    version: 1.2.4-r0
+  - name: libwebp-dev
+    version: 1.2.4-r0
+  - name: libweston-10
+    version: 10.0.1.imx-r0
+  - name: libwrap-dev
+    version: 7.6-r10
+  - name: libwrap0
+    version: 7.6-r10
+  - name: libx11-6
+    version: 1:1.7.3.1-r0
+  - name: libx11-dev
+    version: 1:1.7.3.1-r0
+  - name: libx11-locale
+    version: 1:1.7.3.1-r0
+  - name: libx11-xcb1
+    version: 1:1.7.3.1-r0
+  - name: libxau-dev
+    version: 1:1.0.9-r0
+  - name: libxau6
+    version: 1:1.0.9-r0
+  - name: libxaw7
+    version: 1:1.0.14-r0
+  - name: libxcb-composite0
+    version: 1.14-r0
+  - name: libxcb-damage0
+    version: 1.14-r0
+  - name: libxcb-dev
+    version: 1.14-r0
+  - name: libxcb-dpms0
+    version: 1.14-r0
+  - name: libxcb-dri2-0
+    version: 1.14-r0
+  - name: libxcb-dri3-0
+    version: 1.14-r0
+  - name: libxcb-glx0
+    version: 1.14-r0
+  - name: libxcb-image-dev
+    version: 0.4.0-r0
+  - name: libxcb-image0
+    version: 0.4.0-r0
+  - name: libxcb-keysyms-dev
+    version: 0.4.0-r0
+  - name: libxcb-keysyms1
+    version: 0.4.0-r0
+  - name: libxcb-present0
+    version: 1.14-r0
+  - name: libxcb-randr0
+    version: 1.14-r0
+  - name: libxcb-record0
+    version: 1.14-r0
+  - name: libxcb-render-util-dev
+    version: 0.3.9-r0
+  - name: libxcb-render-util0
+    version: 0.3.9-r0
+  - name: libxcb-render0
+    version: 1.14-r0
+  - name: libxcb-res0
+    version: 1.14-r0
+  - name: libxcb-screensaver0
+    version: 1.14-r0
+  - name: libxcb-shape0
+    version: 1.14-r0
+  - name: libxcb-shm0
+    version: 1.14-r0
+  - name: libxcb-sync1
+    version: 1.14-r0
+  - name: libxcb-util-dev
+    version: 0.4.0-r0
+  - name: libxcb-util1
+    version: 0.4.0-r0
+  - name: libxcb-xf86dri0
+    version: 1.14-r0
+  - name: libxcb-xfixes0
+    version: 1.14-r0
+  - name: libxcb-xinerama0
+    version: 1.14-r0
+  - name: libxcb-xinput0
+    version: 1.14-r0
+  - name: libxcb-xkb1
+    version: 1.14-r0
+  - name: libxcb-xtest0
+    version: 1.14-r0
+  - name: libxcb-xv0
+    version: 1.14-r0
+  - name: libxcb-xvmc0
+    version: 1.14-r0
+  - name: libxcb1
+    version: 1.14-r0
+  - name: libxcomposite-dev
+    version: 1:0.4.5-r0
+  - name: libxcomposite1
+    version: 1:0.4.5-r0
+  - name: libxcursor-dev
+    version: 1:1.2.0-r0
+  - name: libxcursor1
+    version: 1:1.2.0-r0
+  - name: libxcvt
+    version: 0.1.1-r0
+  - name: libxdamage-dev
+    version: 1:1.1.5-r0
+  - name: libxdamage1
+    version: 1:1.1.5-r0
+  - name: libxdmcp-dev
+    version: 1:1.1.3-r0
+  - name: libxdmcp6
+    version: 1:1.1.3-r0
+  - name: libxext-dev
+    version: 1:1.3.4-r0
+  - name: libxext6
+    version: 1:1.3.4-r0
+  - name: libxfixes-dev
+    version: 1:6.0.0-r0
+  - name: libxfixes3
+    version: 1:6.0.0-r0
+  - name: libxfont2-2
+    version: 2.0.5-r0
+  - name: libxft-dev
+    version: 1:2.3.4-r0
+  - name: libxft2
+    version: 1:2.3.4-r0
+  - name: libxi-dev
+    version: 1:1.8-r0
+  - name: libxi6
+    version: 1:1.8-r0
+  - name: libxinerama1
+    version: 1:1.1.4-r0
+  - name: libxkbcommon-dev
+    version: 1.4.1-r0
+  - name: libxkbcommon-x11-0
+    version: 1.4.1-r0
+  - name: libxkbcommon0
+    version: 1.4.1-r0
+  - name: libxkbfile1
+    version: 1:1.1.0-r0
+  - name: libxkbregistry0
+    version: 1.4.1-r0
+  - name: libxml2
+    version: 2.9.14-r0
+  - name: libxml2-dev
+    version: 2.9.14-r0
+  - name: libxmu6
+    version: 1:1.1.3-r0
+  - name: libxmuu1
+    version: 1:1.1.3-r0
+  - name: libxpm4
+    version: 1:3.5.13-r0
+  - name: libxrandr-dev
+    version: 1:1.5.2-r0
+  - name: libxrandr2
+    version: 1:1.5.2-r0
+  - name: libxrender-dev
+    version: 1:0.9.10-r0
+  - name: libxrender1
+    version: 1:0.9.10-r0
+  - name: libxres1
+    version: 1:1.2.1-r0
+  - name: libxshmfence-dev
+    version: 1.3-r0
+  - name: libxshmfence1
+    version: 1.3-r0
+  - name: libxt6
+    version: 1:1.2.1-r0
+  - name: libxtst-dev
+    version: 1:1.2.3-r0
+  - name: libxtst6
+    version: 1:1.2.3-r0
+  - name: libxv-dev
+    version: 1.0.11-r0
+  - name: libxv1
+    version: 1.0.11-r0
+  - name: libxxf86vm-dev
+    version: 1:1.1.4-r0
+  - name: libxxf86vm1
+    version: 1:1.1.4-r0
+  - name: libz-dev
+    version: 1.2.11-r0
+  - name: libz1
+    version: 1.2.11-r0
+  - name: libzstd1
+    version: 1.5.2-r0
+  - name: linux-firmware-ath10k
+    version: 1:20220913-r0
+  - name: linux-firmware-ath10k-license
+    version: 1:20220913-r0
+  - name: linux-firmware-nxp89xx
+    version: 1:20220913-r0
+  - name: linux-imx-headers
+    version: 5.15-r0
+  - name: linux-imx-headers-dev
+    version: 5.15-r0
+  - name: linux-libc-headers-dev
+    version: 5.16-r0
+  - name: linuxptp
+    version: 3.1.1-r0
+  - name: lmbench
+    version: 3.0-a9-r2
+  - name: locale-base-en-gb
+    version: 2.35-r0
+  - name: locale-base-en-us
+    version: 2.35-r0
+  - name: logrotate
+    version: 3.20.1-r0
+  - name: lrzsz
+    version: 0.12.20-r6
+  - name: ltp
+    version: 20220121-r0
+  - name: lvm2
+    version: 2.03.11-r0
+  - name: lvm2-scripts
+    version: 2.03.11-r0
+  - name: lvm2-udevrules
+    version: 2.03.11-r0
+  - name: lz4
+    version: 1:1.9.4-r0
+  - name: m4
+    version: 1.4.19-r0
+  - name: m4-dev
+    version: 1.4.19-r0
+  - name: make
+    version: 4.3-r0
+  - name: make-dev
+    version: 4.3-r0
+  - name: makedevs
+    version: 1.0.1-r0
+  - name: mc
+    version: 4.8.27-r1
+  - name: mc-fish
+    version: 4.8.27-r1
+  - name: mc-helpers
+    version: 4.8.27-r1
+  - name: mc-helpers-perl
+    version: 4.8.27-r1
+  - name: mc-locale-en-gb
+    version: 4.8.27-r1
+  - name: mdadm
+    version: 4.2-r0
+  - name: mdadm-dev
+    version: 4.2-r0
+  - name: media-ctl
+    version: 1.22.1-r0
+  - name: memtester
+    version: 4.5.1-r0
+  - name: mesa-demos
+    version: 8.4.0-r0
+  - name: mesa-dev
+    version: 2:22.0.3-r0
+  - name: minicom
+    version: 2.8-r0
+  - name: mmc-utils
+    version: 0.1+git0+b7e4d5a6ae-r0
+  - name: mobile-broadband-provider-info
+    version: 1:20220725-r0
+  - name: mpg123
+    version: 1.29.3-r0
+  - name: mtd-utils
+    version: 2.1.4-r0
+  - name: mtd-utils-ubifs
+    version: 2.1.4-r0
+  - name: mtdev
+    version: 1.1.6-r0
+  - name: mtdev-dev
+    version: 1.1.6-r0
+  - name: nano
+    version: 6.2-r0
+  - name: nbench-byte
+    version: 2.2.3-r0
+  - name: ncurses
+    version: 6.3+20220423-r0
+  - name: ncurses-dev
+    version: 6.3+20220423-r0
+  - name: ncurses-terminfo
+    version: 6.3+20220423-r0
+  - name: ncurses-terminfo-base
+    version: 6.3+20220423-r0
+  - name: neard
+    version: 0.16-r0
+  - name: net-tools
+    version: 2.10-r0
+  - name: net-tools-mii-tool
+    version: 2.10-r0
+  - name: netbase
+    version: 1:6.3-r0
+  - name: nettle
+    version: 3.7.3-r0
+  - name: nettle-dev
+    version: 3.7.3-r0
+  - name: nfs-utils
+    version: 2.6.1-r0
+  - name: nfs-utils-client
+    version: 2.6.1-r0
+  - name: nfs-utils-mount
+    version: 2.6.1-r0
+  - name: nn-imx
+    version: 1.3.0-r0
+  - name: nnstreamer
+    version: 2.2.0-r0
+  - name: nnstreamer-deepview-rt
+    version: 2.2.0-r0
+  - name: nnstreamer-edge
+    version: 0.1.0-r0
+  - name: nnstreamer-protobuf
+    version: 2.2.0-r0
+  - name: nnstreamer-python3
+    version: 2.2.0-r0
+  - name: nnstreamer-query
+    version: 2.2.0-r0
+  - name: nnstreamer-tensorflow-lite
+    version: 2.2.0-r0
+  - name: nnstreamer-tvm
+    version: 2.2.0-r0
+  - name: ntpdate
+    version: 4.2.8p15-r0
+  - name: numactl
+    version: 2.0.14-r0
+  - name: nxp-afe
+    version: 1.0+git0+18a6c3f79f-r0
+  - name: nxp-afe-voiceseeker
+    version: 2.0+0+ea810018d4-r0
+  - name: nxp-demo-experience
+    version: 4.3+git0+4be19a3ccf_756d755add-r0
+  - name: nxp-wlan-sdk
+    version: git-r0
+  - name: ofono
+    version: 1.34-r0
+  - name: ofono-tests
+    version: 1.34-r0
+  - name: opencv
+    version: 4.6.0.imx-r0
+  - name: opencv-apps
+    version: 4.6.0.imx-r0
+  - name: opencv-dev
+    version: 4.6.0.imx-r0
+  - name: opencv-samples
+    version: 4.6.0.imx-r0
+  - name: openjpeg
+    version: 2.4.0-r0
+  - name: openssh
+    version: 8.9p1-r0
+  - name: openssh-keygen
+    version: 8.9p1-r0
+  - name: openssh-scp
+    version: 8.9p1-r0
+  - name: openssh-sftp-server
+    version: 8.9p1-r0
+  - name: openssh-ssh
+    version: 8.9p1-r0
+  - name: openssh-sshd
+    version: 8.9p1-r0
+  - name: openssl
+    version: 3.0.5-r0
+  - name: openssl-bin
+    version: 3.0.5-r0
+  - name: openssl-conf
+    version: 3.0.5-r0
+  - name: openssl-dev
+    version: 3.0.5-r0
+  - name: openssl-engines
+    version: 3.0.5-r0
+  - name: openssl-ossl-module-legacy
+    version: 3.0.5-r0
+  - name: optee-client
+    version: 3.19.0.imx-r0
+  - name: optee-os
+    version: 3.19.0.imx-r0
+  - name: optee-test
+    version: 3.19.0.imx-r0
+  - name: orc
+    version: 0.4.32-r0
+  - name: orc-dev
+    version: 0.4.32-r0
+  - name: os-release
+    version: 1.0-r0
+  - name: p11-kit
+    version: 0.24.1-r0
+  - name: p11-kit-dev
+    version: 0.24.1-r0
+  - name: p11-kit-locale-en-gb
+    version: 0.24.1-r0
+  - name: packagegroup-base
+    version: 1.0-r83
+  - name: packagegroup-base-3g
+    version: 1.0-r83
+  - name: packagegroup-base-alsa
+    version: 1.0-r83
+  - name: packagegroup-base-bluetooth
+    version: 1.0-r83
+  - name: packagegroup-base-extended
+    version: 1.0-r83
+  - name: packagegroup-base-ipv6
+    version: 1.0-r83
+  - name: packagegroup-base-nfc
+    version: 1.0-r83
+  - name: packagegroup-base-nfs
+    version: 1.0-r83
+  - name: packagegroup-base-pci
+    version: 1.0-r83
+  - name: packagegroup-base-usbgadget
+    version: 1.0-r83
+  - name: packagegroup-base-usbhost
+    version: 1.0-r83
+  - name: packagegroup-base-vfat
+    version: 1.0-r83
+  - name: packagegroup-base-wifi
+    version: 1.0-r83
+  - name: packagegroup-base-zeroconf
+    version: 1.0-r83
+  - name: packagegroup-core-boot
+    version: 1.0-r17
+  - name: packagegroup-core-buildessential
+    version: 1.0-r0
+  - name: packagegroup-core-full-cmdline
+    version: 1.0-r6
+  - name: packagegroup-core-full-cmdline-dev-utils
+    version: 1.0-r6
+  - name: packagegroup-core-full-cmdline-extended
+    version: 1.0-r6
+  - name: packagegroup-core-full-cmdline-initscripts
+    version: 1.0-r6
+  - name: packagegroup-core-full-cmdline-multiuser
+    version: 1.0-r6
+  - name: packagegroup-core-full-cmdline-sys-services
+    version: 1.0-r6
+  - name: packagegroup-core-full-cmdline-utils
+    version: 1.0-r6
+  - name: packagegroup-core-nfs-server
+    version: 1.0-r2
+  - name: packagegroup-core-sdk
+    version: 1.0-r9
+  - name: packagegroup-core-ssh-openssh
+    version: 1.0-r1
+  - name: packagegroup-core-standalone-sdk-target
+    version: 1.0-r8
+  - name: packagegroup-core-tools-debug
+    version: 1.0-r3
+  - name: packagegroup-core-tools-profile
+    version: 1.0-r3
+  - name: packagegroup-core-tools-testapps
+    version: 1.0-r2
+  - name: packagegroup-core-weston
+    version: 1.0-r1
+  - name: packagegroup-distro-base
+    version: 1.0-r83
+  - name: packagegroup-fsl-gstreamer1.0
+    version: 1.0-r0
+  - name: packagegroup-fsl-gstreamer1.0-audio
+    version: 1.0-r0
+  - name: packagegroup-fsl-gstreamer1.0-base
+    version: 1.0-r0
+  - name: packagegroup-fsl-gstreamer1.0-debug
+    version: 1.0-r0
+  - name: packagegroup-fsl-gstreamer1.0-full
+    version: 1.0-r0
+  - name: packagegroup-fsl-gstreamer1.0-network-base
+    version: 1.0-r0
+  - name: packagegroup-fsl-gstreamer1.0-video
+    version: 1.0-r0
+  - name: packagegroup-fsl-optee-imx
+    version: 1.0-r0
+  - name: packagegroup-fsl-tools-audio
+    version: 1.0-r0
+  - name: packagegroup-fsl-tools-benchmark
+    version: 1.0-r0
+  - name: packagegroup-fsl-tools-gpu
+    version: 1.0-r0
+  - name: packagegroup-fsl-tools-gpu-external
+    version: 1.0-r0
+  - name: packagegroup-fsl-tools-testapps
+    version: 1.0-r0
+  - name: packagegroup-fsl-tools-testapps-fslcodec-testapps
+    version: 1.0-r0
+  - name: packagegroup-hailo-tappas
+    version: 1.0-r0
+  - name: packagegroup-hailo-tappas-dev-pkg
+    version: 1.0-r0
+  - name: packagegroup-imx-isp
+    version: 1.0-r0
+  - name: packagegroup-imx-ml
+    version: 1.0-r0
+  - name: packagegroup-imx-security
+    version: 1.0-r0
+  - name: packagegroup-machine-base
+    version: 1.0-r83
+  - name: packagegroup-qt6-demos
+    version: 1.0-r0
+  - name: packagegroup-qt6-imx
+    version: 1.0-r0
+  - name: packagegroup-tools-bluetooth
+    version: 1.0-r0
+  - name: pam-plugin-access
+    version: 1.5.2-r0
+  - name: pam-plugin-deny
+    version: 1.5.2-r0
+  - name: pam-plugin-env
+    version: 1.5.2-r0
+  - name: pam-plugin-faildelay
+    version: 1.5.2-r0
+  - name: pam-plugin-group
+    version: 1.5.2-r0
+  - name: pam-plugin-keyinit
+    version: 1.5.2-r0
+  - name: pam-plugin-lastlog
+    version: 1.5.2-r0
+  - name: pam-plugin-limits
+    version: 1.5.2-r0
+  - name: pam-plugin-loginuid
+    version: 1.5.2-r0
+  - name: pam-plugin-mail
+    version: 1.5.2-r0
+  - name: pam-plugin-motd
+    version: 1.5.2-r0
+  - name: pam-plugin-nologin
+    version: 1.5.2-r0
+  - name: pam-plugin-permit
+    version: 1.5.2-r0
+  - name: pam-plugin-rootok
+    version: 1.5.2-r0
+  - name: pam-plugin-securetty
+    version: 1.5.2-r0
+  - name: pam-plugin-shells
+    version: 1.5.2-r0
+  - name: pam-plugin-unix
+    version: 1.5.2-r0
+  - name: pam-plugin-warn
+    version: 1.5.2-r0
+  - name: pango
+    version: 1.50.4-r0
+  - name: pango-dev
+    version: 1.50.4-r0
+  - name: parted
+    version: 3.4-r0
+  - name: patch
+    version: 2.7.6-r0
+  - name: pciutils
+    version: 3.7.0-r0
+  - name: pciutils-ids
+    version: 3.7.0-r0
+  - name: perf
+    version: 5.15.71+g5ef6222cf-r9
+  - name: perl
+    version: 5.34.1-r0
+  - name: perl-dev
+    version: 5.34.1-r0
+  - name: perl-module-attributes
+    version: 5.34.1-r0
+  - name: perl-module-bytes
+    version: 5.34.1-r0
+  - name: perl-module-bytes-heavy
+    version: 5.34.1-r0
+  - name: perl-module-carp
+    version: 5.34.1-r0
+  - name: perl-module-class-struct
+    version: 5.34.1-r0
+  - name: perl-module-config-heavy
+    version: 5.34.1-r0
+  - name: perl-module-constant
+    version: 5.34.1-r0
+  - name: perl-module-cwd
+    version: 5.34.1-r0
+  - name: perl-module-data-dumper
+    version: 5.34.1-r0
+  - name: perl-module-dynaloader
+    version: 5.34.1-r0
+  - name: perl-module-errno
+    version: 5.34.1-r0
+  - name: perl-module-exporter
+    version: 5.34.1-r0
+  - name: perl-module-exporter-heavy
+    version: 5.34.1-r0
+  - name: perl-module-fcntl
+    version: 5.34.1-r0
+  - name: perl-module-file-basename
+    version: 5.34.1-r0
+  - name: perl-module-file-compare
+    version: 5.34.1-r0
+  - name: perl-module-file-copy
+    version: 5.34.1-r0
+  - name: perl-module-file-find
+    version: 5.34.1-r0
+  - name: perl-module-file-glob
+    version: 5.34.1-r0
+  - name: perl-module-file-path
+    version: 5.34.1-r0
+  - name: perl-module-file-spec
+    version: 5.34.1-r0
+  - name: perl-module-file-spec-unix
+    version: 5.34.1-r0
+  - name: perl-module-file-stat
+    version: 5.34.1-r0
+  - name: perl-module-file-temp
+    version: 5.34.1-r0
+  - name: perl-module-getopt-long
+    version: 5.34.1-r0
+  - name: perl-module-io
+    version: 5.34.1-r0
+  - name: perl-module-io-file
+    version: 5.34.1-r0
+  - name: perl-module-io-handle
+    version: 5.34.1-r0
+  - name: perl-module-io-seekable
+    version: 5.34.1-r0
+  - name: perl-module-list-util
+    version: 5.34.1-r0
+  - name: perl-module-mro
+    version: 5.34.1-r0
+  - name: perl-module-overload
+    version: 5.34.1-r0
+  - name: perl-module-overload-numbers
+    version: 5.34.1-r0
+  - name: perl-module-overloading
+    version: 5.34.1-r0
+  - name: perl-module-parent
+    version: 5.34.1-r0
+  - name: perl-module-pod-usage
+    version: 5.34.1-r0
+  - name: perl-module-posix
+    version: 5.34.1-r0
+  - name: perl-module-re
+    version: 5.34.1-r0
+  - name: perl-module-scalar-util
+    version: 5.34.1-r0
+  - name: perl-module-selectsaver
+    version: 5.34.1-r0
+  - name: perl-module-symbol
+    version: 5.34.1-r0
+  - name: perl-module-term-cap
+    version: 5.34.1-r0
+  - name: perl-module-text-parsewords
+    version: 5.34.1-r0
+  - name: perl-module-text-tabs
+    version: 5.34.1-r0
+  - name: perl-module-text-wrap
+    version: 5.34.1-r0
+  - name: perl-module-thread-queue
+    version: 5.34.1-r0
+  - name: perl-module-threads
+    version: 5.34.1-r0
+  - name: perl-module-threads-shared
+    version: 5.34.1-r0
+  - name: perl-module-tie-hash
+    version: 5.34.1-r0
+  - name: perl-module-xsloader
+    version: 5.34.1-r0
+  - name: pkgconfig
+    version: 0.29.2+git0+d97db4fae4-r0
+  - name: pointercal
+    version: 0.0-r11
+  - name: powertop
+    version: 2.14-r0
+  - name: powertop-locale-en-gb
+    version: 2.14-r0
+  - name: powertop-locale-en-us
+    version: 2.14-r0
+  - name: procps
+    version: 3.3.17-r0
+  - name: procps-dev
+    version: 3.3.17-r0
+  - name: procps-ps
+    version: 3.3.17-r0
+  - name: procps-sysctl
+    version: 3.3.17-r0
+  - name: psmisc
+    version: 23.4-r0
+  - name: pstree
+    version: 23.4-r0
+  - name: ptest-runner
+    version: 2.4.2+git0+bcb82804da-r0
+  - name: ptpd
+    version: 2.3.1-r0
+  - name: pulseaudio-lib-alsa-util
+    version: 15.0-r0
+  - name: pulseaudio-lib-bluez5-util
+    version: 15.0-r0
+  - name: pulseaudio-lib-cli
+    version: 15.0-r0
+  - name: pulseaudio-lib-protocol-cli
+    version: 15.0-r0
+  - name: pulseaudio-lib-protocol-native
+    version: 15.0-r0
+  - name: pulseaudio-misc
+    version: 15.0-r0
+  - name: pulseaudio-module-alsa-card
+    version: 15.0-r0
+  - name: pulseaudio-module-alsa-sink
+    version: 15.0-r0
+  - name: pulseaudio-module-alsa-source
+    version: 15.0-r0
+  - name: pulseaudio-module-always-sink
+    version: 15.0-r0
+  - name: pulseaudio-module-augment-properties
+    version: 15.0-r0
+  - name: pulseaudio-module-bluetooth-discover
+    version: 15.0-r0
+  - name: pulseaudio-module-bluetooth-policy
+    version: 15.0-r0
+  - name: pulseaudio-module-bluez5-device
+    version: 15.0-r0
+  - name: pulseaudio-module-bluez5-discover
+    version: 15.0-r0
+  - name: pulseaudio-module-card-restore
+    version: 15.0-r0
+  - name: pulseaudio-module-cli
+    version: 15.0-r0
+  - name: pulseaudio-module-cli-protocol-unix
+    version: 15.0-r0
+  - name: pulseaudio-module-default-device-restore
+    version: 15.0-r0
+  - name: pulseaudio-module-detect
+    version: 15.0-r0
+  - name: pulseaudio-module-device-manager
+    version: 15.0-r0
+  - name: pulseaudio-module-device-restore
+    version: 15.0-r0
+  - name: pulseaudio-module-filter-apply
+    version: 15.0-r0
+  - name: pulseaudio-module-filter-heuristics
+    version: 15.0-r0
+  - name: pulseaudio-module-intended-roles
+    version: 15.0-r0
+  - name: pulseaudio-module-loopback
+    version: 15.0-r0
+  - name: pulseaudio-module-native-protocol-unix
+    version: 15.0-r0
+  - name: pulseaudio-module-null-sink
+    version: 15.0-r0
+  - name: pulseaudio-module-position-event-sounds
+    version: 15.0-r0
+  - name: pulseaudio-module-rescue-streams
+    version: 15.0-r0
+  - name: pulseaudio-module-role-cork
+    version: 15.0-r0
+  - name: pulseaudio-module-stream-restore
+    version: 15.0-r0
+  - name: pulseaudio-module-suspend-on-idle
+    version: 15.0-r0
+  - name: pulseaudio-module-switch-on-connect
+    version: 15.0-r0
+  - name: pulseaudio-module-switch-on-port-available
+    version: 15.0-r0
+  - name: pulseaudio-module-systemd-login
+    version: 15.0-r0
+  - name: pulseaudio-module-udev-detect
+    version: 15.0-r0
+  - name: pulseaudio-module-x11-bell
+    version: 15.0-r0
+  - name: pulseaudio-module-x11-cork-request
+    version: 15.0-r0
+  - name: pulseaudio-module-x11-publish
+    version: 15.0-r0
+  - name: pulseaudio-module-x11-xsmp
+    version: 15.0-r0
+  - name: pulseaudio-server
+    version: 15.0-r0
+  - name: pyhailort
+    version: 4.20.1-r0
+  - name: pyjailhouse
+    version: 0.2-r0
+  - name: python3-2to3
+    version: 3.10.7-r0
+  - name: python3-appdirs
+    version: 1.4.4-r0
+  - name: python3-argcomplete
+    version: 2.0.0-r0
+  - name: python3-asyncio
+    version: 3.10.7-r0
+  - name: python3-atomicwrites
+    version: 1.4.0-r0
+  - name: python3-atomicwrites-dev
+    version: 1.4.0-r0
+  - name: python3-attrs
+    version: 21.4.0-r0
+  - name: python3-attrs-dev
+    version: 21.4.0-r0
+  - name: python3-audio
+    version: 3.10.7-r0
+  - name: python3-codecs
+    version: 3.10.7-r0
+  - name: python3-colorama
+    version: 0.4.4-r0
+  - name: python3-compile
+    version: 3.10.7-r0
+  - name: python3-compression
+    version: 3.10.7-r0
+  - name: python3-contextlib2
+    version: 21.6.0-r0
+  - name: python3-core
+    version: 3.10.7-r0
+  - name: python3-crypt
+    version: 3.10.7-r0
+  - name: python3-ctypes
+    version: 3.10.7-r0
+  - name: python3-curses
+    version: 3.10.7-r0
+  - name: python3-datetime
+    version: 3.10.7-r0
+  - name: python3-db
+    version: 3.10.7-r0
+  - name: python3-dbus
+    version: 1.2.18-r0
+  - name: python3-debugger
+    version: 3.10.7-r0
+  - name: python3-decorator
+    version: 5.1.1-r0
+  - name: python3-dev
+    version: 3.10.7-r0
+  - name: python3-difflib
+    version: 3.10.7-r0
+  - name: python3-distutils
+    version: 3.10.7-r0
+  - name: python3-doctest
+    version: 3.10.7-r0
+  - name: python3-email
+    version: 3.10.7-r0
+  - name: python3-fcntl
+    version: 3.10.7-r0
+  - name: python3-future
+    version: 0.18.2-r0
+  - name: python3-html
+    version: 3.10.7-r0
+  - name: python3-hypothesis
+    version: 6.39.5-r0
+  - name: python3-hypothesis-dev
+    version: 6.39.5-r0
+  - name: python3-idle
+    version: 3.10.7-r0
+  - name: python3-image
+    version: 3.10.7-r0
+  - name: python3-importlib-metadata
+    version: 4.11.3-r0
+  - name: python3-importlib-metadata-dev
+    version: 4.11.3-r0
+  - name: python3-iniconfig
+    version: 1.1.1-r0
+  - name: python3-iniconfig-dev
+    version: 1.1.1-r0
+  - name: python3-io
+    version: 3.10.7-r0
+  - name: python3-json
+    version: 3.10.7-r0
+  - name: python3-logging
+    version: 3.10.7-r0
+  - name: python3-mailbox
+    version: 3.10.7-r0
+  - name: python3-math
+    version: 3.10.7-r0
+  - name: python3-mime
+    version: 3.10.7-r0
+  - name: python3-misc
+    version: 3.10.7-r0
+  - name: python3-mmap
+    version: 3.10.7-r0
+  - name: python3-modules
+    version: 3.10.7-r0
+  - name: python3-more-itertools
+    version: 8.12.0-r0
+  - name: python3-more-itertools-dev
+    version: 8.12.0-r0
+  - name: python3-multiprocessing
+    version: 3.10.7-r0
+  - name: python3-netaddr
+    version: 0.8.0-r0
+  - name: python3-netclient
+    version: 3.10.7-r0
+  - name: python3-netifaces
+    version: 0.11.0-r0
+  - name: python3-netserver
+    version: 3.10.7-r0
+  - name: python3-numbers
+    version: 3.10.7-r0
+  - name: python3-numpy
+    version: 1.22.3-r0
+  - name: python3-numpy-dev
+    version: 1.22.3-r0
+  - name: python3-opencv
+    version: 4.6.0.imx-r0
+  - name: python3-packaging
+    version: 21.3-r0
+  - name: python3-packaging-dev
+    version: 21.3-r0
+  - name: python3-pathlib2
+    version: 2.3.7-r0
+  - name: python3-pathlib2-dev
+    version: 2.3.7-r0
+  - name: python3-pickle
+    version: 3.10.7-r0
+  - name: python3-pillow
+    version: 9.0.1-r0
+  - name: python3-pip
+    version: 22.0.3-r0
+  - name: python3-pkg-resources
+    version: 59.5.0-r0
+  - name: python3-pkgutil
+    version: 3.10.7-r0
+  - name: python3-plistlib
+    version: 3.10.7-r0
+  - name: python3-pluggy
+    version: 1.0.0-r0
+  - name: python3-pluggy-dev
+    version: 1.0.0-r0
+  - name: python3-pprint
+    version: 3.10.7-r0
+  - name: python3-profile
+    version: 3.10.7-r0
+  - name: python3-protobuf
+    version: 3.20.0-r0
+  - name: python3-psutil
+    version: 5.9.0-r0
+  - name: python3-py
+    version: 1.11.0-r0
+  - name: python3-py-dev
+    version: 1.11.0-r0
+  - name: python3-pycairo
+    version: 1.21.0-r0
+  - name: python3-pydoc
+    version: 3.10.7-r0
+  - name: python3-pygobject
+    version: 3.42.0-r0
+  - name: python3-pyparsing
+    version: 3.0.7-r0
+  - name: python3-pyparsing-dev
+    version: 3.0.7-r0
+  - name: python3-pyqt6
+    version: 6.6.1-r0
+  - name: python3-pyqt6-sip
+    version: 13.6.0-r0
+  - name: python3-pyrealsense2
+    version: 2.50.0-r0
+  - name: python3-pytest
+    version: 7.1.1-r0
+  - name: python3-pytest-dev
+    version: 7.1.1-r0
+  - name: python3-resource
+    version: 3.10.7-r0
+  - name: python3-setuptools
+    version: 59.5.0-r0
+  - name: python3-setuptools-dev
+    version: 59.5.0-r0
+  - name: python3-shell
+    version: 3.10.7-r0
+  - name: python3-shtab
+    version: 1.6.1-r0
+  - name: python3-six
+    version: 1.16.0-r0
+  - name: python3-six-dev
+    version: 1.16.0-r0
+  - name: python3-smtpd
+    version: 3.10.7-r0
+  - name: python3-sortedcontainers
+    version: 2.4.0-r0
+  - name: python3-sortedcontainers-dev
+    version: 2.4.0-r0
+  - name: python3-sqlite3
+    version: 3.10.7-r0
+  - name: python3-statistics
+    version: 3.10.7-r0
+  - name: python3-stringold
+    version: 3.10.7-r0
+  - name: python3-syslog
+    version: 3.10.7-r0
+  - name: python3-termcolor
+    version: 1.1.0-r0
+  - name: python3-terminal
+    version: 3.10.7-r0
+  - name: python3-threading
+    version: 3.10.7-r0
+  - name: python3-tkinter
+    version: 3.10.7-r0
+  - name: python3-tldr
+    version: 3.3.0-r0
+  - name: python3-toml
+    version: 0.10.2-r0
+  - name: python3-toml-dev
+    version: 0.10.2-r0
+  - name: python3-typing-extensions
+    version: 3.10.0.0-r0
+  - name: python3-unittest
+    version: 3.10.7-r0
+  - name: python3-unixadmin
+    version: 3.10.7-r0
+  - name: python3-venv
+    version: 3.10.7-r0
+  - name: python3-wcwidth
+    version: 0.2.5-r0
+  - name: python3-wcwidth-dev
+    version: 0.2.5-r0
+  - name: python3-xml
+    version: 3.10.7-r0
+  - name: python3-xmlrpc
+    version: 3.10.7-r0
+  - name: python3-zipp
+    version: 3.7.0-r0
+  - name: python3-zipp-dev
+    version: 3.7.0-r0
+  - name: pytorch
+    version: 1.9.1.post2-r0
+  - name: qt3d
+    version: 6.3.2-r0
+  - name: qt3d-examples
+    version: 6.3.2-r0
+  - name: qt3d-plugins
+    version: 6.3.2-r0
+  - name: qt3d-qmlplugins
+    version: 6.3.2-r0
+  - name: qtbase
+    version: 6.3.2-r0
+  - name: qtbase-dev
+    version: 6.3.2-r0
+  - name: qtbase-examples
+    version: 6.3.2-r0
+  - name: qtbase-plugins
+    version: 6.3.2-r0
+  - name: qtbase-qmlplugins
+    version: 6.3.2-r0
+  - name: qtbase-staticdev
+    version: 6.3.2-r0
+  - name: qtdeclarative
+    version: 6.3.2-r0
+  - name: qtdeclarative-dev
+    version: 6.3.2-r0
+  - name: qtdeclarative-examples
+    version: 6.3.2-r0
+  - name: qtdeclarative-plugins
+    version: 6.3.2-r0
+  - name: qtdeclarative-qmlplugins
+    version: 6.3.2-r0
+  - name: qtdeclarative-staticdev
+    version: 6.3.2-r0
+  - name: qtlanguageserver
+    version: 6.3.2-r0
+  - name: qtlanguageserver-dev
+    version: 6.3.2-r0
+  - name: qtlanguageserver-plugins
+    version: 6.3.2-r0
+  - name: qtlanguageserver-qmlplugins
+    version: 6.3.2-r0
+  - name: qtquick3d
+    version: 6.3.2-r0
+  - name: qtquick3d-dev
+    version: 6.3.2-r0
+  - name: qtquick3d-examples
+    version: 6.3.2-r0
+  - name: qtquick3d-plugins
+    version: 6.3.2-r0
+  - name: qtquick3d-qmlplugins
+    version: 6.3.2-r0
+  - name: qtsvg
+    version: 6.3.2-r0
+  - name: qtsvg-plugins
+    version: 6.3.2-r0
+  - name: qtsvg-qmlplugins
+    version: 6.3.2-r0
+  - name: qtwayland
+    version: 6.3.2-r0
+  - name: qtwayland-plugins
+    version: 6.3.2-r0
+  - name: qtwayland-qmlplugins
+    version: 6.3.2-r0
+  - name: quilt
+    version: 0.67-r0
+  - name: quota
+    version: 4.06-r0
+  - name: rapidjson
+    version: 1.1.0+git0+0ccdbf364c-r0
+  - name: rapidjson-dev
+    version: 1.1.0+git0+0ccdbf364c-r0
+  - name: rapidopencl
+    version: 1.1.0.1-r0
+  - name: rapidopenvx
+    version: 1.1.0-r0
+  - name: rapidvulkan
+    version: 1.3.211.0-r0
+  - name: renderdoc
+    version: 1.17.imx-r0
+  - name: rootfs-resize
+    version: 1.00-r0
+  - name: rpcbind
+    version: 1.2.6-r0
+  - name: run-postinsts
+    version: 1.0-r10
+  - name: runc-opencontainers
+    version: 1.1.2+git0+b507e2da6c-r0
+  - name: rust-hello-world
+    version: git-r0
+  - name: screen
+    version: 4.9.0-r0
+  - name: sed
+    version: 4.8-r0
+  - name: sed-dev
+    version: 4.8-r0
+  - name: shadow
+    version: 4.11.1-r0
+  - name: shadow-base
+    version: 4.11.1-r0
+  - name: shadow-dev
+    version: 4.11.1-r0
+  - name: shadow-securetty
+    version: 4.6-r3
+  - name: shadow-securetty-dev
+    version: 4.6-r3
+  - name: shared-mime-info
+    version: 2.1-r0
+  - name: shared-mime-info-dev
+    version: 2.1-r0
+  - name: shared-mime-info-locale-en-gb
+    version: 2.1-r0
+  - name: sigma-dut
+    version: git-r0
+  - name: slang
+    version: 2.3.2-r0
+  - name: smw
+    version: git-r0
+  - name: smw-tests
+    version: git-r0
+  - name: socat
+    version: 1.7.4.3-r0
+  - name: socat-dev
+    version: 1.7.4.3-r0
+  - name: sof-imx
+    version: 2.3.0-r0
+  - name: sof-tools
+    version: 2.3.0-r0
+  - name: sof-zephyr
+    version: 2.3.0-r0
+  - name: spidev-test
+    version: 5.15.71+g5ef6222cf-r0
+  - name: spirv-tools
+    version: 1:1.3.204.1-r0
+  - name: stb
+    version: 0.0+git0+f67165c2bb-r0
+  - name: strace
+    version: 5.16-r0
+  - name: sudo
+    version: 1.9.10-r0
+  - name: sudo-lib
+    version: 1.9.10-r0
+  - name: sudo-sudo
+    version: 1.9.10-r0
+  - name: sysklogd
+    version: 2.3.0-r0
+  - name: systemd
+    version: 1:250.5-r0
+  - name: systemd-analyze
+    version: 1:250.5-r0
+  - name: systemd-compat-units
+    version: 1.0-r29
+  - name: systemd-compat-units-dev
+    version: 1.0-r29
+  - name: systemd-conf
+    version: 1:1.0-r0
+  - name: systemd-dev
+    version: 1:250.5-r0
+  - name: systemd-extra-utils
+    version: 1:250.5-r0
+  - name: systemd-gpuconfig
+    version: 1.0-r0
+  - name: systemd-serialgetty
+    version: 1.0-r5
+  - name: systemd-serialgetty-dev
+    version: 1.0-r5
+  - name: systemd-udev-rules
+    version: 1:250.5-r0
+  - name: systemd-vconsole-setup
+    version: 1:250.5-r0
+  - name: systemtap
+    version: 4.6-r0
+  - name: systemtap-locale-en
+    version: 4.6-r0
+  - name: systemtap-runtime
+    version: 4.6-r0
+  - name: tappas-apps
+    version: 3.31.0-r0
+  - name: tappas-tracers
+    version: 3.31.0-r0
+  - name: tar
+    version: 1.34-r0
+  - name: tbb
+    version: 1:2021.5.0-r0
+  - name: tbb-dev
+    version: 1:2021.5.0-r0
+  - name: tcl
+    version: 8.6.11-r0
+  - name: tensorflow-lite-vx-delegate
+    version: 2.9.1-r0
+  - name: tesseract
+    version: 4.1.3-r0
+  - name: tesseract-dev
+    version: 4.1.3-r0
+  - name: tesseract-lang-eng
+    version: 4.1.0-r0
+  - name: tim-vx
+    version: 1.1.42-r0
+  - name: time
+    version: 1.9-r0
+  - name: tini
+    version: 0.19.0-r0
+  - name: tinycompress
+    version: 1.2.5+git0+f3ba6e5c21-r0
+  - name: tiobench
+    version: 0.3.3-r1
+  - name: tk
+    version: 8.6.10-r0
+  - name: tk-lib
+    version: 8.6.10-r0
+  - name: tmux
+    version: 3.1c-r0
+  - name: torchvision
+    version: 0.10.0-r0
+  - name: tslib-conf
+    version: 1.22-r0
+  - name: ttf-dejavu-common
+    version: 2.37-r7
+  - name: ttf-dejavu-sans
+    version: 2.37-r7
+  - name: ttf-dejavu-sans-mono
+    version: 2.37-r7
+  - name: ttf-dejavu-serif
+    version: 2.37-r7
+  - name: tvm
+    version: 0.7.0-r0
+  - name: tzdata
+    version: 2022d-r0
+  - name: tzdata-africa
+    version: 2022d-r0
+  - name: tzdata-americas
+    version: 2022d-r0
+  - name: tzdata-antarctica
+    version: 2022d-r0
+  - name: tzdata-arctic
+    version: 2022d-r0
+  - name: tzdata-asia
+    version: 2022d-r0
+  - name: tzdata-atlantic
+    version: 2022d-r0
+  - name: tzdata-australia
+    version: 2022d-r0
+  - name: tzdata-core
+    version: 2022d-r0
+  - name: tzdata-europe
+    version: 2022d-r0
+  - name: tzdata-misc
+    version: 2022d-r0
+  - name: tzdata-pacific
+    version: 2022d-r0
+  - name: tzdata-posix
+    version: 2022d-r0
+  - name: tzdata-right
+    version: 2022d-r0
+  - name: udev
+    version: 1:250.5-r0
+  - name: udev-extraconf
+    version: 1.1-r0
+  - name: udev-hwdb
+    version: 1:250.5-r0
+  - name: udev-rules-imx
+    version: 1.0-r0
+  - name: unzip
+    version: 1:6.0-r5
+  - name: unzip-dev
+    version: 1:6.0-r5
+  - name: update-alternatives-opkg
+    version: 0.5.0-r0
+  - name: update-rc.d
+    version: 0.8-r0
+  - name: update-rc.d-dev
+    version: 0.8-r0
+  - name: usbutils
+    version: 014-r0
+  - name: util-linux
+    version: 2.37.4-r0
+  - name: util-linux-addpart
+    version: 2.37.4-r0
+  - name: util-linux-agetty
+    version: 2.37.4-r0
+  - name: util-linux-blkdiscard
+    version: 2.37.4-r0
+  - name: util-linux-blkid
+    version: 2.37.4-r0
+  - name: util-linux-blkzone
+    version: 2.37.4-r0
+  - name: util-linux-blockdev
+    version: 2.37.4-r0
+  - name: util-linux-cal
+    version: 2.37.4-r0
+  - name: util-linux-cfdisk
+    version: 2.37.4-r0
+  - name: util-linux-chcpu
+    version: 2.37.4-r0
+  - name: util-linux-chfn
+    version: 2.37.4-r0
+  - name: util-linux-chmem
+    version: 2.37.4-r0
+  - name: util-linux-choom
+    version: 2.37.4-r0
+  - name: util-linux-chrt
+    version: 2.37.4-r0
+  - name: util-linux-chsh
+    version: 2.37.4-r0
+  - name: util-linux-col
+    version: 2.37.4-r0
+  - name: util-linux-colcrt
+    version: 2.37.4-r0
+  - name: util-linux-colrm
+    version: 2.37.4-r0
+  - name: util-linux-column
+    version: 2.37.4-r0
+  - name: util-linux-ctrlaltdel
+    version: 2.37.4-r0
+  - name: util-linux-delpart
+    version: 2.37.4-r0
+  - name: util-linux-dev
+    version: 2.37.4-r0
+  - name: util-linux-dmesg
+    version: 2.37.4-r0
+  - name: util-linux-eject
+    version: 2.37.4-r0
+  - name: util-linux-fallocate
+    version: 2.37.4-r0
+  - name: util-linux-fdisk
+    version: 2.37.4-r0
+  - name: util-linux-fincore
+    version: 2.37.4-r0
+  - name: util-linux-findfs
+    version: 2.37.4-r0
+  - name: util-linux-findmnt
+    version: 2.37.4-r0
+  - name: util-linux-flock
+    version: 2.37.4-r0
+  - name: util-linux-fsck
+    version: 2.37.4-r0
+  - name: util-linux-fsck.cramfs
+    version: 2.37.4-r0
+  - name: util-linux-fsfreeze
+    version: 2.37.4-r0
+  - name: util-linux-fstrim
+    version: 2.37.4-r0
+  - name: util-linux-getopt
+    version: 2.37.4-r0
+  - name: util-linux-hardlink
+    version: 2.37.4-r0
+  - name: util-linux-hexdump
+    version: 2.37.4-r0
+  - name: util-linux-hwclock
+    version: 2.37.4-r0
+  - name: util-linux-ionice
+    version: 2.37.4-r0
+  - name: util-linux-ipcmk
+    version: 2.37.4-r0
+  - name: util-linux-ipcrm
+    version: 2.37.4-r0
+  - name: util-linux-ipcs
+    version: 2.37.4-r0
+  - name: util-linux-irqtop
+    version: 2.37.4-r0
+  - name: util-linux-isosize
+    version: 2.37.4-r0
+  - name: util-linux-kill
+    version: 2.37.4-r0
+  - name: util-linux-last
+    version: 2.37.4-r0
+  - name: util-linux-ldattach
+    version: 2.37.4-r0
+  - name: util-linux-logger
+    version: 2.37.4-r0
+  - name: util-linux-look
+    version: 2.37.4-r0
+  - name: util-linux-losetup
+    version: 2.37.4-r0
+  - name: util-linux-lsblk
+    version: 2.37.4-r0
+  - name: util-linux-lscpu
+    version: 2.37.4-r0
+  - name: util-linux-lsipc
+    version: 2.37.4-r0
+  - name: util-linux-lsirq
+    version: 2.37.4-r0
+  - name: util-linux-lslocks
+    version: 2.37.4-r0
+  - name: util-linux-lslogins
+    version: 2.37.4-r0
+  - name: util-linux-lsmem
+    version: 2.37.4-r0
+  - name: util-linux-lsns
+    version: 2.37.4-r0
+  - name: util-linux-mcookie
+    version: 2.37.4-r0
+  - name: util-linux-mesg
+    version: 2.37.4-r0
+  - name: util-linux-mkfs
+    version: 2.37.4-r0
+  - name: util-linux-mkfs.cramfs
+    version: 2.37.4-r0
+  - name: util-linux-mkswap
+    version: 2.37.4-r0
+  - name: util-linux-more
+    version: 2.37.4-r0
+  - name: util-linux-mount
+    version: 2.37.4-r0
+  - name: util-linux-mountpoint
+    version: 2.37.4-r0
+  - name: util-linux-namei
+    version: 2.37.4-r0
+  - name: util-linux-nologin
+    version: 2.37.4-r0
+  - name: util-linux-nsenter
+    version: 2.37.4-r0
+  - name: util-linux-partx
+    version: 2.37.4-r0
+  - name: util-linux-pivot-root
+    version: 2.37.4-r0
+  - name: util-linux-prlimit
+    version: 2.37.4-r0
+  - name: util-linux-readprofile
+    version: 2.37.4-r0
+  - name: util-linux-rename
+    version: 2.37.4-r0
+  - name: util-linux-renice
+    version: 2.37.4-r0
+  - name: util-linux-resizepart
+    version: 2.37.4-r0
+  - name: util-linux-rev
+    version: 2.37.4-r0
+  - name: util-linux-rfkill
+    version: 2.37.4-r0
+  - name: util-linux-rtcwake
+    version: 2.37.4-r0
+  - name: util-linux-runuser
+    version: 2.37.4-r0
+  - name: util-linux-script
+    version: 2.37.4-r0
+  - name: util-linux-scriptlive
+    version: 2.37.4-r0
+  - name: util-linux-scriptreplay
+    version: 2.37.4-r0
+  - name: util-linux-setarch
+    version: 2.37.4-r0
+  - name: util-linux-setpriv
+    version: 2.37.4-r0
+  - name: util-linux-setsid
+    version: 2.37.4-r0
+  - name: util-linux-setterm
+    version: 2.37.4-r0
+  - name: util-linux-sfdisk
+    version: 2.37.4-r0
+  - name: util-linux-su
+    version: 2.37.4-r0
+  - name: util-linux-sulogin
+    version: 2.37.4-r0
+  - name: util-linux-swaplabel
+    version: 2.37.4-r0
+  - name: util-linux-swapoff
+    version: 2.37.4-r0
+  - name: util-linux-swapon
+    version: 2.37.4-r0
+  - name: util-linux-switch-root
+    version: 2.37.4-r0
+  - name: util-linux-taskset
+    version: 2.37.4-r0
+  - name: util-linux-uclampset
+    version: 2.37.4-r0
+  - name: util-linux-ul
+    version: 2.37.4-r0
+  - name: util-linux-umount
+    version: 2.37.4-r0
+  - name: util-linux-unshare
+    version: 2.37.4-r0
+  - name: util-linux-utmpdump
+    version: 2.37.4-r0
+  - name: util-linux-uuidd
+    version: 2.37.4-r0
+  - name: util-linux-uuidgen
+    version: 2.37.4-r0
+  - name: util-linux-uuidparse
+    version: 2.37.4-r0
+  - name: util-linux-wall
+    version: 2.37.4-r0
+  - name: util-linux-wdctl
+    version: 2.37.4-r0
+  - name: util-linux-whereis
+    version: 2.37.4-r0
+  - name: util-linux-wipefs
+    version: 2.37.4-r0
+  - name: util-linux-write
+    version: 2.37.4-r0
+  - name: util-linux-zramctl
+    version: 2.37.4-r0
+  - name: util-macros-dev
+    version: 1:1.19.3-r0
+  - name: v4l-utils
+    version: 1.22.1-r0
+  - name: v4l-utils-dev
+    version: 1.22.1-r0
+  - name: valgrind
+    version: 3.18.1-r0
+  - name: vkmark
+    version: git-r0
+  - name: vlan
+    version: 1.9-r0
+  - name: volatile-binds
+    version: 1.0-r0
+  - name: volatile-binds-dev
+    version: 1.0-r0
+  - name: vulkan-headers
+    version: 1.2.182.0-r0
+  - name: vulkan-headers-dev
+    version: 1.2.182.0-r0
+  - name: vulkan-tools
+    version: 1.2.182.0-r0
+  - name: vulkan-validationlayers
+    version: 1.2.182.0-r0
+  - name: wayland
+    version: 1.20.0-r0
+  - name: wayland-dev
+    version: 1.20.0-r0
+  - name: wayland-protocols
+    version: 1.25.imx-r0
+  - name: wayland-utils
+    version: 1.0.0-r0
+  - name: weston
+    version: 10.0.1.imx-r0
+  - name: weston-examples
+    version: 10.0.1.imx-r0
+  - name: weston-init
+    version: 1.0-r0
+  - name: weston-xwayland
+    version: 10.0.1.imx-r0
+  - name: which
+    version: 2.21-r3
+  - name: which-dev
+    version: 2.21-r3
+  - name: wireless-regdb-static
+    version: 2022.08.12-r0
+  - name: wireless-tools
+    version: 1:30.pre9-r0
+  - name: wpa-supplicant
+    version: 2.10-r0
+  - name: wpa-supplicant-cli
+    version: 2.10-r0
+  - name: wpa-supplicant-passphrase
+    version: 2.10-r0
+  - name: x11perf
+    version: 1:1.6.1-r0
+  - name: xcb-proto-dev
+    version: 1.14.1-r0
+  - name: xcb-util-wm
+    version: 0.4.1-r0
+  - name: xcb-util-wm-dev
+    version: 0.4.1-r0
+  - name: xkbcomp
+    version: 1.4.5-r0
+  - name: xkeyboard-config
+    version: 2.35.1-r0
+  - name: xkeyboard-config-dev
+    version: 2.35.1-r0
+  - name: xkeyboard-config-locale-en-gb
+    version: 2.35.1-r0
+  - name: xorgproto-dev
+    version: 2021.5-r0
+  - name: xprop
+    version: 1:1.2.5-r0
+  - name: xrandr
+    version: 1:1.5.1-r0
+  - name: xrandr-dev
+    version: 1:1.5.1-r0
+  - name: xrestop
+    version: 0.4-r3
+  - name: xterm
+    version: 372-r0
+  - name: xtrans-dev
+    version: 1:1.4.0-r0
+  - name: xwayland
+    version: 22.1.3-r0
+  - name: xwininfo
+    version: 1.1.5-r0
+  - name: xxhash
+    version: 0.8.1-r0
+  - name: xz
+    version: 5.2.6-r0
+  - name: xz-dev
+    version: 5.2.6-r0
+  - name: zephyr-demo-imx
+    version: 3.2.0-r0
+  - name: zeromq
+    version: 4.3.4-r0
+  - name: zeromq-dev
+    version: 4.3.4-r0
+  - name: zstd
+    version: 1.5.2-r0
+  - name: zstd-dev
+    version: 1.5.2-r0
+  python_packages:
+  - name: Pillow
+    version: 9.0.1
+  - name: PyGObject
+    version: 3.42.0
+  - name: PyQt6
+    version: 6.6.1
+  - name: PyQt6-sip
+    version: 13.6.0
+  - name: appdirs
+    version: 1.4.4
+  - name: argcomplete
+    version: 2.0.0
+  - name: atomicwrites
+    version: 1.4.0
+  - name: attrs
+    version: 21.4.0
+  - name: blinker
+    version: 1.9.0
+  - name: btrfsutil
+    version: 5.16.2
+  - name: click
+    version: 8.3.1
+  - name: colorama
+    version: 0.4.4
+  - name: contextlib2
+    version: 21.6.0
+  - name: decorator
+    version: 5.1.1
+  - name: deepview-rt
+    version: 2.4.46
+  - name: Flask
+    version: 3.1.2
+  - name: future
+    version: 0.18.2
+  - name: hailort
+    version: 4.20.1
+  - name: hypothesis
+    version: 6.39.5
+  - name: importlib-metadata
+    version: 4.11.3
+  - name: iniconfig
+    version: 1.1.1
+  - name: itsdangerous
+    version: 2.2.0
+  - name: Jinja2
+    version: 3.1.6
+  - name: MarkupSafe
+    version: 3.0.3
+  - name: more-itertools
+    version: 8.12.0
+  - name: netaddr
+    version: 0.8.0
+  - name: netifaces
+    version: 0.11.0
+  - name: numpy
+    version: 1.22.3
+  - name: onnxruntime
+    version: 1.10.0
+  - name: packaging
+    version: '21.3'
+  - name: pathlib2
+    version: 2.3.7
+  - name: pip
+    version: 22.0.3
+  - name: pluggy
+    version: 1.0.0
+  - name: protobuf
+    version: 3.20.0
+  - name: psutil
+    version: 5.9.0
+  - name: py
+    version: 1.11.0
+  - name: pycairo
+    version: 1.21.0
+  - name: pyparsing
+    version: 3.0.7
+  - name: pytest
+    version: 7.1.1
+  - name: PyYAML
+    version: 6.0.3
+  - name: setuptools
+    version: 59.5.0
+  - name: shtab
+    version: 1.6.1
+  - name: six
+    version: 1.16.0
+  - name: sortedcontainers
+    version: 2.4.0
+  - name: termcolor
+    version: 1.1.0
+  - name: tflite-runtime
+    version: 2.9.1
+  - name: tldr
+    version: 3.3.0
+  - name: toml
+    version: 0.10.2
+  - name: torch
+    version: 1.9.1.post2
+  - name: torchvision
+    version: 0.10.0
+  - name: tvm
+    version: 0.7.0
+  - name: typing-extensions
+    version: 3.10.0.0
+  - name: wcwidth
+    version: 0.2.5
+  - name: Werkzeug
+    version: 3.1.5
+  - name: zipp
+    version: 3.7.0
+  yocto:
+    release: 5.15-kirkstone (kirkstone)
+    distro: NXP i.MX Release Distro
+    distro_id: fsl-imx-xwayland
+    distro_codename: kirkstone
+    os_release:
+      id: fsl-imx-xwayland
+      name: NXP i.MX Release Distro
+      version: 5.15-kirkstone (kirkstone)
+      version_id: 5.15-kirkstone
+      pretty_name: NXP i.MX Release Distro 5.15-kirkstone (kirkstone)
+      distro_codename: kirkstone
+    issue: NXP i.MX Release Distro 5.15-kirkstone
+    uname:
+      sysname: Linux
+      nodename: astrial-8gb-imx8mp
+      release: 5.15.71+g5ef6222cf
+      version: '#1 SMP PREEMPT Fri Feb 21 13:47:25 UTC 2025'
+      machine: aarch64
+    kernel:
+      kernel_version: 5.15.71+g5ef6222cf
+      kernel_full: 'Linux version 5.15.71+g5ef6222cf (oe-user@oe-host) (aarch64-poky-linux-gcc
+        (GCC) 11.3.0, GNU ld (GNU Binutils) 2.38.20220708) #1 SMP PREEMPT Fri Feb
+        21 13:47:25 UTC 2025'
+      cmdline: console=ttymxc0,115200 root=/dev/mmcblk2p2 rootwait rw
+    build:
+      distro: fsl-imx-xwayland
+      distro_version: 5.15-kirkstone
+      datetime: '20250514064200'
+      distro_name: NXP i.MX Release Distro
+      image_basename: system-astrial-image
+      machine: astrial-8gb-imx8mp
+      tune_pkgarch: armv8a
+      machine_features: usbgadget usbhost vfat alsa touchscreen pci wifi bluetooth
+        nxp8987 nxp8987 linux-imx-signature imx-boot-signature u-boot-imx-signature
+        optee jailhouse  rtc qemu-usermode
+      distro_features: acl alsa argp bluetooth debuginfod ext2 ipv4 ipv6 largefile
+        pcmcia usbgadget usbhost wifi xattr nfs zeroconf pci 3g nfc x11 vfat seccomp
+        largefile opengl ptest multiarch  vulkan  systemd jailhouse virtualization
+        x11 wayland pam pulseaudio gobject-introspection-data ldconfig
+      common_features: ''
+      image_features: debug-tweaks hwcodecs nfs-server package-management splash ssh-server-openssh
+        tools-debug tools-profile tools-sdk tools-testapps weston
+      tune_features: aarch64 armv8a crc crypto
+      target_fpu: ''
+    layers:
+      meta: HEAD:24a3f7b3648185e33133f5d96b184a6cb6524f3d
+      meta-poky: HEAD:24a3f7b3648185e33133f5d96b184a6cb6524f3d
+      meta-oe: HEAD:744a4b6eda88b9a9ca1cf0df6e18be384d9054e3
+      meta-multimedia: HEAD:744a4b6eda88b9a9ca1cf0df6e18be384d9054e3
+      meta-python: HEAD:744a4b6eda88b9a9ca1cf0df6e18be384d9054e3
+      meta-freescale: HEAD:c82d4634e7aba8bc0de73ce1dfc997b630051571
+      meta-freescale-3rdparty: HEAD:5977197340c7a7db17fe3e02a4e014ad997565ae
+      meta-freescale-distro: HEAD:d5bbb487b2816dfc74984a78b67f7361ce404253
+      meta-bsp: HEAD:9174c61f4dc80b14e0bfdaec9200ed58fb41615f
+      meta-sdk: HEAD:9174c61f4dc80b14e0bfdaec9200ed58fb41615f
+      meta-ml: HEAD:9174c61f4dc80b14e0bfdaec9200ed58fb41615f
+      meta-v2x: HEAD:9174c61f4dc80b14e0bfdaec9200ed58fb41615f
+      meta-nxp-demo-experience: HEAD:52eaf8bf42f8eda2917a1c8c046003c8c2c8f629
+      meta-chromium: HEAD:e232c2e21b96dc092d9af8bea4b3a528e7a46dd6
+      meta-clang: HEAD:c728c3f9168c8a4ed05163a51dd48ca1ad8ac21d
+      meta-gnome: HEAD:744a4b6eda88b9a9ca1cf0df6e18be384d9054e3
+      meta-networking: HEAD:744a4b6eda88b9a9ca1cf0df6e18be384d9054e3
+      meta-filesystems: HEAD:744a4b6eda88b9a9ca1cf0df6e18be384d9054e3
+      meta-qt6: HEAD:ed785a25d12e365d1054700d4fc94a053176eb14
+      meta-virtualization: HEAD:9482648daf0bb42ff3475e7892542cf99f3b8d48
+      meta-intel-realsense: HEAD:25d59f0c12ff41181b7e66bb93d443c81a09c058
+      meta-hailo-accelerator: HEAD:3a2665df39d1464e1808b5c95a8ce44994fae8b5
+      meta-hailo-libhailort: HEAD:3a2665df39d1464e1808b5c95a8ce44994fae8b5
+      meta-hailo-tappas: HEAD:3a2665df39d1464e1808b5c95a8ce44994fae8b5
+      meta-imx8mp-isp-imx219: HEAD:b496ceff816023647414a4a9a6074c2ba8aa9be3
+      meta-secure-boot: HEAD:7158fbae750517a278a89e18cf4466f8c9d1c610
+      meta-sysele-nxp-5.15.71: HEAD:45684bf0a27f891b77df0f36952c889fdd4577ab
+    bitbake_version: null
+metadata:
+  device_fingerprint: 7b0b741539f5295b6e65a1e4afa62585da6ab151d89f63d8b7474239c70427f2
+
