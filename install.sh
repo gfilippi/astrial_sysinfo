@@ -57,6 +57,11 @@ cleanup() {
 # MAIN
 # --------------------------------------------------
 
+# install libs first
+pip3 install pyyaml
+
+# fetch and install tools
+
 mkdir -p "$TMP_DIR"
 
 URL=$( get_latest_release_url )
