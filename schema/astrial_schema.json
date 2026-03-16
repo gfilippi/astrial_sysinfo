@@ -1,0 +1,154 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Astrial Platform Descriptor",
+  "type": "object",
+
+  "required": [
+    "hardware",
+    "software",
+    "metadata"
+  ],
+
+  "properties": {
+
+    "hardware": {
+      "type": "object",
+
+      "properties": {
+
+        "cpu": {
+          "type": "object",
+          "properties": {
+            "model": { "type": ["string", "null"] },
+            "architecture": { "type": "string" },
+            "cores": { "type": "integer" }
+          }
+        },
+
+        "memory": {
+          "type": "object",
+          "properties": {
+            "ram_bytes": { "type": "integer" }
+          }
+        },
+
+        "storage": {
+          "type": "object",
+          "properties": {
+            "rootfs_bytes": { "type": "integer" }
+          }
+        },
+
+        "board": {
+          "type": "object",
+          "properties": {
+            "model": { "type": ["string", "null"] },
+            "compatible": { "type": ["string", "null"] }
+          }
+        },
+
+        "accelerators": {
+          "type": "object",
+          "properties": {
+
+            "hailo": {
+              "type": "object",
+              "properties": {
+                "device": { "type": ["string", "null"] },
+                "firmware": { "type": ["string", "null"] },
+                "identify_raw": { "type": ["string", "null"] }
+              }
+            }
+
+          }
+        }
+
+      }
+    },
+
+    "software": {
+      "type": "object",
+
+      "properties": {
+
+        "kernel": {
+          "type": "object",
+          "properties": {
+            "release": { "type": "string" },
+            "version": { "type": ["string", "null"] }
+          }
+        },
+
+        "os_release": {
+          "type": "object"
+        },
+
+        "deb_packages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "version": { "type": "string" }
+            }
+          }
+        },
+
+        "python_packages": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "properties": {
+              "name": { "type": "string" },
+              "version": { "type": "string" }
+            }
+          }
+        }
+
+      }
+    },
+
+    "metadata": {
+      "type": "object",
+
+      "properties": {
+
+        "device_fingerprint": {
+          "type": "string"
+        },
+
+        "ai_capabilities": {
+          "type": "object",
+          "properties": {
+
+            "ai_acceleration": { "type": "boolean" },
+
+            "accelerators": {
+              "type": "object"
+            },
+
+            "supported_runtimes": {
+              "type": "object"
+            },
+
+            "deployment_limits": {
+              "type": "object"
+            }
+
+          }
+        },
+
+        "yocto_build": {
+          "type": "object",
+          "properties": {
+            "distro": { "type": ["string", "null"] },
+            "release": { "type": ["string", "null"] },
+            "machine": { "type": ["string", "null"] }
+          }
+        }
+
+      }
+    }
+
+  }
+}

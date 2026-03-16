@@ -1,0 +1,55 @@
+=== 
+possible structure for topics/plugins 
+=== 
+
+
+astrial_sysinfo/
+│
+├── sysinfo.py
+├── core/
+│   ├── plugin.py
+│   ├── utils.py
+│   ├── loader.py
+│   └── schema.py
+│
+├── plugins/
+│   ├── hardware/
+│   │   ├── cpu.py
+│   │   ├── memory.py
+│   │   ├── storage.py
+│   │   ├── device_tree.py
+│   │   ├── hailo.py
+│   │   ├── gpu.py
+│   │   ├── usb.py
+│   │   ├── pcie.py
+│   │   ├── camera_v4l2.py
+│   │   └── thermal.py
+│   │
+│   ├── software/
+│   │   ├── kernel.py
+│   │   ├── yocto.py
+│   │   ├── deb_packages.py
+│   │   ├── python_packages.py
+│   │   ├── ai_runtimes.py
+│   │   └── containers.py
+│   │
+│   └── metadata/
+│       ├── fingerprint.py
+│       ├── ai_capabilities.py
+│       └── ai_performance_estimate.py
+│
+└── schema/
+    └── astrial_platform_schema.json
+
+
+=== 
+Validating Output Against the Schema 
+=== 
+
+Install validator:
+
+pip install jsonschema
+
+Validate:
+
+python -m jsonschema -i device_report.json schema/astrial_schema.json
