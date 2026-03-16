@@ -1,13 +1,20 @@
 # astrial_sysinfo
 This is a simple script to create a json or yaml output with a detailed description of ASTRIAL platform. Uself to gather info when downloading/installing 3rd party apps, checking for missing packages or veryfying hw/sw requirements.
 
-how to use:
+## how to install
+use curl to pull the installer and execute:
 ```
-python3 ./sysinfo.py --format yaml > ./info.yaml
+curl -O -s https://raw.githubusercontent.com/gfilippi/astrial_sysinfo/refs/heads/main/install.sh && chmod 754 ./install.sh && install.sh
+```
+The script will be located under /opt/astrial_sysinfo folder.
+
+## how to use:
+```
+/opt/astrial_sysinfo/sysinfo.py --format yaml > ./info.yaml
 ```
 or
 ```
-python3 ./sysinfo.py --format json > ./info.json
+/opt/astrial_sysinfo/sysinfo.py --format json > ./info.json
 ```
 the output structure is separated in sections: hardware, software, metadata, here is a (reduced) example of the output
 
